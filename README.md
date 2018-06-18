@@ -2,5 +2,5 @@
 
 Game in Javascript.
 
-Main: html, css, javascript
+Main: html, css, javascript || 
 Additional tools: sass, gulp
