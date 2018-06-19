@@ -54,6 +54,12 @@ const clickedCard = function()
 
                                     if (gameLength == cardPairs)
                                     {
+                                                document.querySelector(".flash-card").style.border = "0";
+                                                cards.forEach(function(e)
+                                                  {
+                                                      e.style.border = "0";
+                                                  })
+
                                                 setTimeout(function()
                                               {
                                                     document.querySelector(".summary").style.display = "flex";
@@ -63,7 +69,7 @@ const clickedCard = function()
                                                       {
                                                            location.reload();
                                                       })
-                                              }, 500)
+                                              }, 250)
                                     }
                           }
 
