@@ -199,18 +199,23 @@ footer
                                background-color: transparent;
                          }
 
-                               .next
-                               {
-                                   transform: rotateY(180deg);
-                                   border-radius: 50%;
-                                   border: 0;
-                                   width: 100px;
-                                   height: 100px;
-                                   margin: 0 5px;
-                                   cursor: pointer;
-                                   background-color: transparent;
-                               }
+                          a
+                          {
+                            width: 100px;
+                            height: 100px;
 
+                                .next
+                                {
+                                    transform: rotateY(180deg);
+                                    border-radius: 50%;
+                                    border: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    margin: 0 5px;
+                                    cursor: pointer;
+                                    background-color: transparent;
+                                }
+                          }
           }
 }
 .lvl
