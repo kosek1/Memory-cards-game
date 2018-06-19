@@ -214,7 +214,7 @@ footer {
   .window-levels-on {
     width: 20%;
     left: calc(95% - 20%); }
-    .window-levels-on button {
+    .window-levels-on a .level-button {
       width: 25px;
       height: 25px;
       font-size: 15px; } }

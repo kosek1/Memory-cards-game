@@ -298,12 +298,16 @@ footer
         {
           width: 20%;
           left: calc(95% - 20%);
-                 button
-                 {
-                     width: 25px;
-                     height: 25px;
-                     font-size: 15px;
-                 }
+
+                    a
+                    {
+                                 .level-button
+                                 {
+                                     width: 25px;
+                                     height: 25px;
+                                     font-size: 15px;
+                                 }
+                   }
         }
 }
 
