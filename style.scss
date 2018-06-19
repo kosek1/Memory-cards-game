@@ -21,6 +21,7 @@ body
 
          .active-level
          {
+           margin-left: 2%;
             width: 100%;
             height: 10vh;
             display: flex;
@@ -187,22 +188,30 @@ footer
               position: absolute;
               bottom: 10vh;
 
-                    button
-                    {
-                          border-radius: 50%;
-                          border: 0;
-                          width: 100px;
-                          height: 100px;
-                          margin: 0 5px;
-                          cursor: pointer;
-                          background-color: transparent;
-                    }
+                         button
+                         {
+                               border-radius: 50%;
+                               border: 0;
+                               width: 100px;
+                               height: 100px;
+                               margin: 0 5px;
+                               cursor: pointer;
+                               background-color: transparent;
+                         }
 
-                    button:nth-child(3)
-                    {
-                        transform: rotateY(180deg);
-                    }
-            }
+                               .next
+                               {
+                                   transform: rotateY(180deg);
+                                   border-radius: 50%;
+                                   border: 0;
+                                   width: 100px;
+                                   height: 100px;
+                                   margin: 0 5px;
+                                   cursor: pointer;
+                                   background-color: transparent;
+                               }
+
+          }
 }
 .lvl
 {
@@ -309,6 +318,108 @@ footer
                                  }
                    }
         }
+}
+
+@media (max-width: 359px)
+{
+      .window-levels-on
+      {
+                  a
+                  {
+                               .level-button
+                               {
+                                   width: 21px;
+                                   height: 21px;
+                               }
+                 }
+      }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) and (max-height: 480px)
+{
+     .level
+     {
+           .active-level
+           {
+              margin: 5px 0 0 10px;
+           }
+            .choose-level
+            {
+                    top: 2.5vh;
+                    left: calc(95% - 15%);
+                    width: 15%;
+                   height: 8vh;
+            }
+      }
+      .summary
+      {
+          top: 50%;
+          height: 160px;
+
+
+                .photos-section
+                {
+                   margin: 0 10px 10vh;
+                   width: 300px;
+                   height: 180px;
+                }
+                 .buttons
+                 {
+                    bottom: -10vh;
+                    width: 225px;
+                    height: 225px;
+                 }
+                 span
+                 {
+                      height: 0;
+                 }
+      }
+
+      .window-levels-on
+      {
+          top: 12vh;
+          left: calc(95% - 15%);
+          width: 15%;
+
+                  a
+                  {
+                               .level-button
+                               {
+                                   width: 30px;
+                                   height: 30px;
+                                   font-size: 20px;
+                               }
+                 }
+      }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) and (min-height: 480px)
+{
+      .level
+      {
+             .choose-level
+             {
+                     top: 1.5vh;
+                     left: calc(95% - 15%);
+                     width: 15%;
+                    height: 8vh;
+             }
+       }
+       .window-levels-on
+       {
+         top: 10vh;
+         left: calc(95% - 15%);
+         width: 15%;
+                   a
+                   {
+                                .level-button
+                                {
+                                    width: 40px;
+                                    height: 40px;
+                                    font-size: 23px;
+                                }
+                  }
+       }
 }
 
 
