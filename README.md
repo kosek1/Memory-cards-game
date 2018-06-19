@@ -1,4 +1,6 @@
-# Memory-cards-game
+# Memory cards game
+
+https://kosek1.github.io/memory
 
 Game in Javascript.
 
