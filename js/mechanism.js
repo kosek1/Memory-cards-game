@@ -65,10 +65,8 @@ const clickedCard = function()
                                                     document.querySelector(".summary").style.display = "flex";
                                                     document.querySelector(".flash-card").style.display = "none";
                                                     document.querySelector("body").style.backgroundColor = "black";
-                                                    document.querySelector(".again").addEventListener("click", function()
-                                                      {
-                                                           location.reload();
-                                                      })
+                                                    document.querySelector(".again").addEventListener("click", () => location.reload() )
+                                                    document.querySelector(".next").addEventListener("click", () => location.href= "level2.html")
                                               }, 250)
                                     }
                           }

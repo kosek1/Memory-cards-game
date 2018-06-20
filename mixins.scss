@@ -19,7 +19,7 @@
     background-image: url('img/level1/cat.svg');
     background-repeat: no-repeat;
    background-size: 100% 100%;
-   background-color: rgb(36, 147, 64);
+   background-color: $color-background-animals;
 }
 
 @mixin cat-word
@@ -28,7 +28,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
-  background-color: black;
+  background-color: $color-background-word;
 }
 
 @mixin dog
@@ -37,7 +37,7 @@
   background-repeat: no-repeat;
  background-size: 100% 105%;
  background-position: center;
- background-color: rgb(36, 147, 64);
+ background-color: $color-background-animals;
 }
 
 @mixin dog-word
@@ -46,7 +46,87 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
-  background-color: black;
+  background-color: $color-background-word;
 }
 
+@mixin cow
+{
+   background-image: url('img/level2/cow.svg');
+   background-repeat: no-repeat;
+   background-color:  $color-background-animals;
+   background-position: center;
+   background-size: 80% 80%;
+}
+
+@mixin cow-word
+{
+    background-image: url('img/level2/cow_word.png');
+    background-repeat: no-repeat;
+    background-color: $color-background-word;
+    background-position: center;
+    background-size: 50%;
+}
+
+@mixin summary
+{
+                    .photos-section
+                    {
+                            width: 300px;
+                            height: 240px;
+                            position: absolute;
+                            bottom: 25vh;
+                            display: flex;
+                            flex-direction: column;
+                            margin:  0 auto 40px;
+
+
+                            span
+                            {
+                              width: 300px;
+                              height: 240px;
+                              font-size: 40px;
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+
+                                  img
+                                  {
+                                     width: 100px;
+                                     height: 100px;
+                                  }
+                            }
+                      }
+
+                    .buttons
+                    {
+                      width: 300px;
+                      height: 100px;
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: center;
+                      align-items: center;
+                      position: absolute;
+                      bottom: 10vh;
+
+                                 button
+                                 {
+                                       border-radius: 50%;
+                                       border: 0;
+                                       width: 100px;
+                                       height: 100px;
+                                       margin: 0 5px;
+                                       cursor: pointer;
+                                       background-color: transparent;
+                                 }
+
+                              button:nth-child(3)
+                              {
+                                 transform: rotateY(180deg);
+                              }
+                  }
+}
+
+
 $color-border-flash-card: #aaa;
+$color-background-animals: rgb(36, 147, 64);
+$color-background-word: black;
