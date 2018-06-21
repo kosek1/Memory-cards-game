@@ -145,6 +145,36 @@ footer
    @include cow-word;
 }
 
+.tiger
+{
+   @include tiger;
+}
+
+.tiger-word
+{
+   @include tiger-word;
+}
+
+.lion
+{
+   @include lion;
+}
+
+.lion-word
+{
+   @include lion-word;
+}
+
+.panda
+{
+   @include panda;
+}
+
+.panda-word
+{
+   @include panda-word;
+}
+
 .summary
 {
    position: absolute;
@@ -405,13 +435,7 @@ footer
                   height: 50%;
                 }
 
-                div:nth-child(1)
-                {
-                  border-right: 2px solid $color-border-flash-card;
-                  border-bottom:  2px solid $color-border-flash-card;
-                }
-
-                div:nth-child(2)
+                div:nth-child(1), div:nth-child(2),
                 {
                   border-right: 2px solid $color-border-flash-card;
                   border-bottom:  2px solid $color-border-flash-card;
@@ -422,12 +446,7 @@ footer
                   border-bottom:  2px solid $color-border-flash-card;
                 }
 
-                div:nth-child(4)
-                {
-                  border-right: 2px solid $color-border-flash-card;
-                }
-
-                div:nth-child(5)
+                div:nth-child(4),  div:nth-child(5)
                 {
                   border-right: 2px solid $color-border-flash-card;
                 }
@@ -510,4 +529,218 @@ footer
          height: 50vh;
          margin: 10vh auto;
       }
+}
+
+// level 3
+
+.container-level-three
+{
+      width: 90%;
+      height: 80vh;
+      margin: -3vh auto 0;
+      display: block;
+
+        .flash-card
+        {
+          width: 80%;
+          height: 100%;
+          margin: 3vh auto;
+          display: flex;
+          flex-wrap: wrap;
+          border: 3px solid black;
+          justify-content: center;
+          align-items: center;
+
+                div
+                {
+                  width: 25%;
+                  height: 33.33%;
+                }
+
+                div:nth-child(1), div:nth-child(2), div:nth-child(3), div:nth-child(5), div:nth-child(6),
+                div:nth-child(7)
+                {
+                  border-right: 2px solid $color-border-flash-card;
+                  border-bottom:  2px solid $color-border-flash-card;
+                }
+
+                div:nth-child(4), div:nth-child(8)
+                {
+                  border-bottom: 2px solid $color-border-flash-card;
+                }
+
+                div:nth-child(9), div:nth-child(10), div:nth-child(11)
+                {
+                   border-right: 2px solid $color-border-flash-card;
+                }
+        }
+}
+
+@media (orientation: portrait)
+{
+      .container-level-three
+      {
+         width: 100%;
+         height: 60vh;
+         margin: 10vh auto 0;
+               .flash-card
+               {
+                 width: 95%;
+                 height: 90%;
+               }
+      }
+}
+
+.summary-level-three
+{
+           position: absolute;
+           top: -10%;
+           left:  7.5%;
+           width: 85%;
+           height: 90%;
+           z-index: 100;
+           display: none;
+           animation: opacity 2s linear;
+           flex-direction: column;
+          align-items: center;
+          animation: opacity 1s linear;
+         @include summary;
+                  .buttons
+                  {
+                     bottom: -8vh;
+                  }
+                  .photos-section
+                  {
+                    height: 35vh;
+                        span
+                        {
+                               img
+                               {
+                                  width: 75px;
+                                  height: 75px;
+                               }
+                        }
+                  }
+}
+
+@media (orientation: portrait)
+{
+     .summary-level-three
+     {
+       top: -15%;
+          .buttons
+          {
+              bottom: -19vh;
+                 button
+                   {
+                      width: 70px;
+                      height: 70px;
+                   }
+          }
+     }
+
+     .photos-section
+     {
+          span
+          {
+                img
+                {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+     }
+}
+
+
+@media (orientation: portrait) and (min-width: 300px) and (max-width: 340px)
+{
+  .summary-level-three
+  {
+         .buttons
+         {
+            height: 60px;
+            bottom: -22.5vh;
+                 button
+                 {
+                    width: 60px;
+                    height: 60px;
+                 }
+         }
+
+             .photos-section
+             {
+               height: 22.5vh;
+                   span
+                   {
+                          img
+                          {
+                             width: 40px;
+                             height: 40px;
+                          }
+                   }
+             }
+      }
+}
+
+@media (orientation: landscape) and (max-height: 380px)
+{
+      .summary-level-three
+      {
+                        .buttons
+                        {
+                           height: 50px;
+                           bottom: -10vh;
+                              button
+                              {
+                                 width:  50px;
+                                 height: 50px
+                              }
+                        }
+
+                        .photos-section
+                        {
+                          height: 30vh;
+                              span
+                              {
+                                font-size: 30px;
+                                     img
+                                     {
+                                        width: 37.5px;
+                                        height: 37.5px;
+                                     }
+                              }
+                        }
+         }
+}
+
+@media (orientation: landscape) and (max-height: 340px)
+{
+      .summary-level-three
+      {
+                        .buttons
+                        {
+                           height: 40px;
+                           bottom: -15vh;
+                              button
+                              {
+                                 width:  50px;
+                                 height: 40px
+                              }
+                        }
+
+                        .photos-section
+                        {
+                          height: 30vh;
+                              span
+                              {
+                                font-size: 30px;
+                                     img
+                                     {
+                                        width: 35px;
+                                        height: 35px;
+                                     }
+                              }
+                        }
+         }
 }

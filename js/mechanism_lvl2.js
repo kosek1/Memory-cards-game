@@ -93,7 +93,7 @@ const randomCards = () =>
                    card.classList.add("hidden");
                    card.addEventListener("click", clickedCard)
                })
-        }, 2000)
+        }, 1000)
   }
 
   randomCards();

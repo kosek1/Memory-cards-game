@@ -14,7 +14,6 @@ gameLength = 0;
 
 const clickedCard = function()
 {
-
         activeCard = this;
 
         if (activeCards[0] == activeCard)
@@ -32,7 +31,7 @@ const clickedCard = function()
 
        else //drugie klikniecie
         {
-                cards.forEach(function(aCard)
+                cards.forEach( aCard =>
               {
                    aCard.removeEventListener("click" , clickedCard);
               })
@@ -40,12 +39,12 @@ const clickedCard = function()
                 activeCards[1] = activeCard;
 
 
-                   setTimeout(function()
+                   setTimeout( () =>
                     {
                           if(activeCards[0].className === "cat" && activeCards[1].className === "cat-word" || activeCards[0].className === "cat-word" && activeCards[1].className === "cat" ||
                               activeCards[0].className === "dog" && activeCards[1].className === "dog-word" || activeCards[0].className === "dog-word" && activeCards[1].className === "dog")
                           {
-                             activeCards.forEach(function(aCard)
+                             activeCards.forEach( aCard =>
                              {
                                   aCard.classList.remove("hidden");
                                   aCard.classList.add("off");
@@ -55,12 +54,12 @@ const clickedCard = function()
                                     if (gameLength == cardPairs)
                                     {
                                                 document.querySelector(".flash-card").style.border = "0";
-                                                cards.forEach(function(e)
+                                                cards.forEach( e =>
                                                   {
                                                       e.style.border = "0";
                                                   })
 
-                                                setTimeout(function()
+                                                setTimeout( () =>
                                               {
                                                     document.querySelector(".summary").style.display = "flex";
                                                     document.querySelector(".flash-card").style.display = "none";
@@ -73,7 +72,7 @@ const clickedCard = function()
 
                         else
                         {
-                                 activeCards.forEach(function(aCard)
+                                 activeCards.forEach(aCard =>
                                {
                                   aCard.classList.add("hidden");
                                })
@@ -81,7 +80,7 @@ const clickedCard = function()
 
                       activeCard = "";
                       activeCards.length = 0;
-                      cards.forEach(function(aCard)
+                      cards.forEach( aCard =>
                         {
                            aCard.addEventListener("click" , clickedCard);
                         })
@@ -90,23 +89,23 @@ const clickedCard = function()
 }
 
 
-const randomCards = function()
+const randomCards = () =>
 {
-    cards.forEach(function(aCard)
+    cards.forEach( aCard =>
     {
         const individualPosition = Math.floor(Math.random() * cardTab.length);
         aCard.classList.add(cardTab[individualPosition]);
         cardTab.splice(individualPosition, 1);
     });
 
-     setTimeout(function()
+     setTimeout( () =>
      {
-             cards.forEach(function(aCard)
+             cards.forEach( aCard =>
            {
                 aCard.classList.add("hidden");
                 aCard.addEventListener("click", clickedCard);
            })
-     }, 2000);
+     }, 750);
 }
 
 randomCards();
