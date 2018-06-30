@@ -82,7 +82,7 @@ const randomCards = () =>
           {
              cards.forEach(e => e.classList.add("hidden"));
              cards.forEach(e => e.addEventListener("click", clickedCard));
-          }, 2000)
+          }, 3500)
 }
 
 randomCards();
