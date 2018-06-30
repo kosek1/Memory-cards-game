@@ -175,6 +175,26 @@ footer
    @include panda-word;
 }
 
+.fox
+{
+   @include fox;
+}
+
+.fox-word
+{
+   @include fox-word;
+}
+
+.elephant
+{
+   @include elephant;
+}
+
+.elephant-word
+{
+   @include elephant-word;
+}
+
 .summary
 {
    position: absolute;
@@ -743,4 +763,62 @@ footer
                               }
                         }
          }
+}
+
+.container-level-four
+{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+         .flash-card
+         {
+             width: 50%;
+             height: 95%;
+             display: flex;
+             flex-wrap: wrap;
+             border: 3px solid black;
+
+                  div
+                  {
+                      width: 25%;
+                      height: 25%;
+                  }
+
+                  div:nth-child(1), div:nth-child(2), div:nth-child(3), div:nth-child(5), div:nth-child(6) , div:nth-child(7),
+                  div:nth-child(9), div:nth-child(10), div:nth-child(11)
+                  {
+                     border-right: 2px solid $color-border-flash-card;
+                     border-bottom: 2px solid $color-border-flash-card;
+                  }
+
+                  div:nth-child(4), div:nth-child(8), div:nth-child(12)
+                  {
+                     border-bottom: 2px solid $color-border-flash-card;
+                  }
+
+                  div:nth-child(13), div:nth-child(14), div:nth-child(15)
+                  {
+                     border-right: 2px solid $color-border-flash-card;
+                  }
+         }
+}
+
+@media (orientation: portrait)
+{
+   .container-level-four
+     {
+          .flash-card
+          {
+             width: 95%;
+             height: 70%;
+          }
+     }
+}
+
+.summary-level-four
+{
+  display: none;
 }

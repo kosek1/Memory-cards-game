@@ -121,6 +121,42 @@
     background-size: 75%;
 }
 
+@mixin fox
+{
+    background-image: url('img/level4/fox.svg');
+    background-repeat: no-repeat;
+    background-color: $color-background-animals;
+    background-position: center;
+    background-size: 75%;
+}
+
+@mixin fox-word
+{
+    background-image: url('img/level4/fox_word.png');
+    background-repeat: no-repeat;
+    background-color: $color-background-word;
+    background-position: center;
+    background-size: 65%;
+}
+
+@mixin elephant
+{
+    background-image: url('img/level4/elephant.svg');
+    background-repeat: no-repeat;
+    background-color: $color-background-animals;
+    background-position: center;
+    background-size: 80%;
+}
+
+@mixin elephant-word
+{
+    background-image: url('img/level4/elephant_word.png');
+    background-repeat: no-repeat;
+    background-color: $color-background-word;
+    background-position: center;
+    background-size: 80% 250%;
+}
+
 @mixin summary
 {
                     .photos-section

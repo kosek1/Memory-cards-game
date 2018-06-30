@@ -163,6 +163,34 @@ footer {
   background-position: center;
   background-size: 75%; }
 
+.fox {
+  background-image: url("img/level4/fox.svg");
+  background-repeat: no-repeat;
+  background-color: #249340;
+  background-position: center;
+  background-size: 75%; }
+
+.fox-word {
+  background-image: url("img/level4/fox_word.png");
+  background-repeat: no-repeat;
+  background-color: #323232;
+  background-position: center;
+  background-size: 65%; }
+
+.elephant {
+  background-image: url("img/level4/elephant.svg");
+  background-repeat: no-repeat;
+  background-color: #249340;
+  background-position: center;
+  background-size: 80%; }
+
+.elephant-word {
+  background-image: url("img/level4/elephant_word.png");
+  background-repeat: no-repeat;
+  background-color: #323232;
+  background-position: center;
+  background-size: 80% 250%; }
+
 .summary {
   position: absolute;
   top: 10%;
@@ -575,3 +603,33 @@ footer {
       .summary-level-three .photos-section span img {
         width: 35px;
         height: 35px; } }
+.container-level-four {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .container-level-four .flash-card {
+    width: 50%;
+    height: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid black; }
+    .container-level-four .flash-card div {
+      width: 25%;
+      height: 25%; }
+    .container-level-four .flash-card div:nth-child(1), .container-level-four .flash-card div:nth-child(2), .container-level-four .flash-card div:nth-child(3), .container-level-four .flash-card div:nth-child(5), .container-level-four .flash-card div:nth-child(6), .container-level-four .flash-card div:nth-child(7),
+    .container-level-four .flash-card div:nth-child(9), .container-level-four .flash-card div:nth-child(10), .container-level-four .flash-card div:nth-child(11) {
+      border-right: 2px solid #aaa;
+      border-bottom: 2px solid #aaa; }
+    .container-level-four .flash-card div:nth-child(4), .container-level-four .flash-card div:nth-child(8), .container-level-four .flash-card div:nth-child(12) {
+      border-bottom: 2px solid #aaa; }
+    .container-level-four .flash-card div:nth-child(13), .container-level-four .flash-card div:nth-child(14), .container-level-four .flash-card div:nth-child(15) {
+      border-right: 2px solid #aaa; }
+
+@media (orientation: portrait) {
+  .container-level-four .flash-card {
+    width: 95%;
+    height: 70%; } }
+.summary-level-four {
+  display: none; }
