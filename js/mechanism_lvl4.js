@@ -46,8 +46,8 @@ const clickedCard = function()
 
                                                setTimeout( () =>
                                              {
-                                                   document.querySelector(".summary-level-three").style.display = "flex";
-                                                   document.querySelector(".flash-card").style.display = "none";
+                                                   document.querySelector(".container-level-four").style.display = "none";
+                                                   document.querySelector(".summary-level-four").style.display = "flex";
                                                    document.querySelector("body").style.backgroundColor = "black";
                                                    document.querySelector(".previous").addEventListener("click", () => location.href = "level3.html");
                                                    document.querySelector(".again").addEventListener("click", () => location.reload() );
