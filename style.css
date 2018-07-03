@@ -381,11 +381,6 @@ footer {
       width: 40px;
       height: 40px;
       font-size: 23px; } }
-@keyframes opacity {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 .container-level-two {
   width: 50%;
   height: 50vh;
@@ -491,8 +486,10 @@ footer {
 .container-level-three {
   width: 90%;
   height: 80vh;
-  margin: -3vh auto 0;
-  display: block; }
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .container-level-three .flash-card {
     width: 80%;
     height: 100%;
@@ -810,3 +807,8 @@ footer {
 @media (width: 568px) {
   .summary-level-five .buttons {
     bottom: 0; } }
+@keyframes opacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

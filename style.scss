@@ -448,12 +448,6 @@ footer
 }
 
 
-@keyframes opacity
-{
-  0% { opacity: 0;}
-  100% { opacity: 1;}
-}
-
 
 
 
@@ -591,8 +585,10 @@ footer
 {
       width: 90%;
       height: 80vh;
-      margin: -3vh auto 0;
-      display: block;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
         .flash-card
         {
@@ -1215,3 +1211,14 @@ footer
 
 
 // level 6
+
+
+
+
+
+
+@keyframes opacity
+{
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}
