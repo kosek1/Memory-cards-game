@@ -560,7 +560,7 @@ footer {
 
 @media (orientation: portrait) {
   .summary-level-three {
-    margin: 10vh auto; }
+    margin: 0 auto; }
     .summary-level-three .buttons {
       width: 225px;
       height: 225px;
