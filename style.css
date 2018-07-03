@@ -523,29 +523,24 @@ footer {
       width: 95%;
       height: 90%; } }
 .summary-level-three {
-  position: absolute;
-  top: -10%;
-  left: 7.5%;
-  width: 85%;
-  height: 90%;
-  z-index: 100;
   display: none;
+  justify-content: center;
+  margin: 20vh auto;
+  width: 340px;
+  height: 400px;
   animation: opacity 2s linear;
-  flex-direction: column;
-  align-items: center;
   animation: opacity 1s linear; }
   .summary-level-three .photos-section {
-    width: 300px;
-    height: 240px;
-    position: absolute;
-    bottom: 25vh;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    margin: 0 auto 40px; }
+    font-size: 20px; }
+    .summary-level-three .photos-section .left-side, .summary-level-three .photos-section .right-side {
+      display: flex;
+      flex-direction: column;
+      width: 170px;
+      height: 400px; }
     .summary-level-three .photos-section span {
-      width: 300px;
-      height: 240px;
-      font-size: 40px;
       display: flex;
       justify-content: center;
       align-items: center; }
@@ -555,82 +550,58 @@ footer {
   .summary-level-three .buttons {
     width: 300px;
     height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     bottom: 10vh; }
     .summary-level-three .buttons button {
-      border-radius: 50%;
+      width: 30%;
+      height: 100%;
+      background-color: transparent;
       border: 0;
-      width: 100px;
-      height: 100px;
-      margin: 0 5px;
-      cursor: pointer;
-      background-color: transparent; }
+      cursor: pointer; }
     .summary-level-three .buttons button:nth-child(3) {
       transform: rotateY(180deg); }
-  .summary-level-three .buttons {
-    bottom: -8vh; }
-  .summary-level-three .photos-section {
-    height: 35vh; }
-    .summary-level-three .photos-section span img {
-      width: 75px;
-      height: 75px; }
 
 @media (orientation: portrait) {
   .summary-level-three {
-    top: -15%; }
+    margin: 10vh auto; }
     .summary-level-three .buttons {
-      bottom: -19vh; }
-      .summary-level-three .buttons button {
-        width: 70px;
-        height: 70px; }
+      width: 225px;
+      height: 225px;
+      bottom: 0; }
 
   .photos-section span img {
     width: 70px;
     height: 70px; } }
-@media (orientation: portrait) and (min-width: 300px) and (max-width: 340px) {
-  .summary-level-three .buttons {
-    height: 60px;
-    bottom: -22.5vh; }
-    .summary-level-three .buttons button {
-      width: 60px;
-      height: 60px; }
+@media (orientation: landscape) and (max-width: 740px) {
+  .summary-level-three {
+    height: 300px;
+    margin: 8vh auto 0; }
+    .summary-level-three .photos-section .left-side, .summary-level-three .photos-section .right-side {
+      width: 150px; }
+      .summary-level-three .photos-section .left-side img, .summary-level-three .photos-section .right-side img {
+        width: 60px;
+        height: 60px; }
+    .summary-level-three .buttons {
+      width: 150px;
+      height: 50px; } }
+@media (width: 960px) and (height: 600px) {
+  .summary-level-three {
+    margin: 5vh auto; } }
+@media (width: 320px) {
+  .summary-level-three {
+    width: 290px; }
+
   .summary-level-three .photos-section {
-    height: 22.5vh; }
-    .summary-level-three .photos-section span img {
-      width: 40px;
-      height: 40px; } }
-@media (orientation: landscape) and (max-height: 380px) {
+    width: 290px; }
+
+  .summary-level-three .left-side, .right-side {
+    width: 140px !important; }
+
   .summary-level-three .buttons {
-    height: 50px;
-    bottom: -10vh; }
-    .summary-level-three .buttons button {
-      width: 50px;
-      height: 50px; }
-  .summary-level-three .photos-section {
-    height: 30vh; }
-    .summary-level-three .photos-section span {
-      font-size: 30px; }
-      .summary-level-three .photos-section span img {
-        width: 37.5px;
-        height: 37.5px; } }
-@media (orientation: landscape) and (max-height: 340px) {
+    bottom: -8vh; } }
+@media (width: 568px) {
   .summary-level-three .buttons {
-    height: 40px;
-    bottom: -15vh; }
-    .summary-level-three .buttons button {
-      width: 50px;
-      height: 40px; }
-  .summary-level-three .photos-section {
-    height: 30vh; }
-    .summary-level-three .photos-section span {
-      font-size: 30px; }
-      .summary-level-three .photos-section span img {
-        width: 35px;
-        height: 35px; } }
+    bottom: 0; } }
 .container-level-four {
   width: 100%;
   height: 80vh;
