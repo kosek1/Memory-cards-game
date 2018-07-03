@@ -195,6 +195,32 @@ footer
    @include elephant-word;
 }
 
+.fish
+{
+   @include fish;
+}
+
+.fish-word
+{
+   @include fish-word;
+}
+
+.ladybird
+{
+   @include ladybird;
+}
+
+.ladybird-word
+{
+   @include ladybird-word;
+}
+
+
+
+
+
+// start lvl 1
+
 .summary
 {
    position: absolute;
@@ -428,7 +454,10 @@ footer
   100% { opacity: 1;}
 }
 
-// end lvl 1
+
+
+
+
 
 // start lvl 2
 
@@ -550,6 +579,11 @@ footer
          margin: 10vh auto;
       }
 }
+
+
+
+
+
 
 // level 3
 
@@ -765,6 +799,14 @@ footer
          }
 }
 
+
+
+
+
+
+
+// start lvl 4
+
 .container-level-four
 {
     width: 100%;
@@ -962,4 +1004,213 @@ footer
     }
 }
 
+
+
+
+
+
+
 // level 5
+
+.container-level-five
+{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+         .flash-card
+         {
+             width: 50%;
+             height: 95%;
+             display: flex;
+             flex-wrap: wrap;
+             border: 3px solid black;
+
+                  div
+                  {
+                      width: 20%;
+                      height: 25%;
+                  }
+
+                  div:nth-child(1), div:nth-child(2), div:nth-child(3), div:nth-child(4), div:nth-child(6) , div:nth-child(7),
+                  div:nth-child(8), div:nth-child(9), div:nth-child(11), div:nth-child(12), div:nth-child(13), div:nth-child(14)
+                  {
+                     border-right: 2px solid $color-border-flash-card;
+                     border-bottom: 2px solid $color-border-flash-card;
+                  }
+
+                  div:nth-child(5), div:nth-child(10), div:nth-child(15)
+                  {
+                     border-bottom: 2px solid $color-border-flash-card;
+                  }
+
+                  div:nth-child(16), div:nth-child(17), div:nth-child(18), div:nth-child(19)
+                  {
+                     border-right: 2px solid $color-border-flash-card;
+                  }
+         }
+}
+
+@media (orientation: portrait)
+{
+      .container-level-five
+        {
+             .flash-card
+             {
+                width: 95%;
+                height: 70%;
+             }
+        }
+}
+
+.summary-level-five
+{
+      display: none;
+      justify-content: center;
+      margin: 10vh auto;
+      width: 340px;
+      height: 400px;
+      animation: opacity 2s linear;
+     animation: opacity 1s linear;
+
+
+          .photos-section
+            {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            font-size: 20px;
+
+                  .left-side, .right-side
+                  {
+                     display: flex;
+                     flex-direction: column;
+                     width: 170px;
+                     height: 400px;
+                  }
+
+                  span
+                  {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                        img
+                        {
+                          width: 80px;
+                          height: 80px;
+                        }
+                  }
+          }
+
+          .buttons
+          {
+            width: 300px;
+            height: 100px;
+            position: absolute;
+            bottom: 10vh;
+
+                 button
+                 {
+                   width: 30%;
+                   height: 100%;
+                   background-color: transparent;
+                   border: 0;
+                   cursor: pointer;
+                 }
+
+                 button:nth-child(3)
+                 {
+                    transform: rotateY(180deg);
+                 }
+          }
+}
+
+@media (orientation: portrait)
+{
+     .summary-level-five
+     {
+        margin: 2vh auto;
+
+          .buttons
+          {
+              width: 225px;
+              height: 225px;
+              bottom: -5vh;
+          }
+     }
+}
+
+@media (orientation: landscape) and (max-width: 740px)
+{
+     .summary-level-five
+     {
+         height: 300px;
+         margin: 0 auto;
+               .photos-section
+               {
+                     .left-side, .right-side
+                     {
+                       width: 150px;
+                           img
+                           {
+                              width: 48px;
+                              height: 48px;
+                           }
+                     }
+               }
+
+               .buttons
+               {
+                  width: 150px;
+                  height: 50px;
+               }
+     }
+}
+
+@media (width: 960px) and (height:600px)
+{
+    .summary-level-five
+    {
+        margin: -2vh auto;
+    }
+}
+
+@media (width: 320px)
+{
+      .summary-level-five
+      {
+         width: 290px;
+      }
+
+      .summary-level-five .photos-section
+      {
+         width: 290px;
+      }
+
+      .summary-level-five .left-side, .right-side
+      {
+         width: 140px !important;
+      }
+
+      .summary-level-five .buttons
+      {
+         bottom: -8vh;
+      }
+}
+
+@media (width: 568px)
+{
+    .summary-level-five .buttons
+    {
+        bottom: 0;
+    }
+}
+
+
+
+
+
+// level 6

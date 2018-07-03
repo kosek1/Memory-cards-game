@@ -157,6 +157,42 @@
     background-size: 80% 250%;
 }
 
+@mixin fish
+{
+    background-image: url('img/level5/fish.svg');
+    background-repeat: no-repeat;
+    background-color: $color-background-animals;
+    background-position: center;
+    background-size: 60% 70%;
+}
+
+@mixin fish-word
+{
+    background-image: url('img/level5/fish_word.png');
+    background-repeat: no-repeat;
+    background-color: $color-background-word;
+    background-position: center;
+    background-size: 70% 90%;
+}
+
+@mixin ladybird
+{
+    background-image: url('img/level5/ladybird.svg');
+    background-repeat: no-repeat;
+    background-color: $color-background-animals;
+    background-position: center;
+    background-size: 80% 250%;
+}
+
+@mixin ladybird-word
+{
+    background-image: url('img/level5/ladybird_word.png');
+    background-repeat: no-repeat;
+    background-color: $color-background-word;
+    background-position: center;
+    background-size: 80% 250%;
+}
+
 @mixin summary
 {
                     .photos-section
