@@ -1,4 +1,6 @@
-const cardsTab = ["cat", "cat-word", "dog", "dog-word", "cow", "cow-word", "tiger", "tiger-word" , "lion", "lion-word", "panda", "panda-word", "fox", "fox-word", "elephant", "elephant-word"];
+const cardsTab = ["cat", "cat-word", "dog", "dog-word", "cow", "cow-word", "tiger", "tiger-word" , "lion", "lion-word", "panda", "panda-word", "fox", "fox-word", "elephant",
+                                 "elephant-word", "fish", "fish-word", "ladybird", "ladybird-word", "crocodile", "crocodile-word", "giraffe", "giraffe-word", "kangaroo", "kangaroo-word",
+                                  "monkey", "monkey-word", "parrot", "parrot-word", "pig", "pig-word", "squirrel", "squirrel-word", "turtle", "turtle-word"];
 
 let  cards = document.querySelectorAll(".flash-card div");
 cards = [... cards];
@@ -6,7 +8,7 @@ cards = [... cards];
 let activeCard = "";
 const activeCards = [];
 
- const cardPairs = 8;
+ const cardPairs = 18;
  let gameLength = 0;
 
  const currentTime = new Date().getTime();
@@ -33,7 +35,7 @@ const activeCards = [];
               }
                count();
          }, 1000)
-   }, 4000)
+   }, 9000)
 
 
 const clickedCard = function()
@@ -61,14 +63,24 @@ const clickedCard = function()
                        activeCards[0].className === "lion" && activeCards[1].className === "lion-word" || activeCards[0].className === "lion-word" && activeCards[1].className === "lion" ||
                        activeCards[0].className === "panda" && activeCards[1].className === "panda-word" || activeCards[0].className === "panda-word" && activeCards[1].className === "panda" ||
                        activeCards[0].className === "fox" && activeCards[1].className === "fox-word" || activeCards[0].className === "fox-word" && activeCards[1].className === "fox" ||
-                       activeCards[0].className === "elephant" && activeCards[1].className === "elephant-word" || activeCards[0].className === "elephant-word" && activeCards[1].className === "elephant")
+                       activeCards[0].className === "elephant" && activeCards[1].className === "elephant-word" || activeCards[0].className === "elephant-word" && activeCards[1].className === "elephant" ||
+                       activeCards[0].className === "fish" && activeCards[1].className === "fish-word" || activeCards[0].className === "fish-word" && activeCards[1].className === "fish" ||
+                       activeCards[0].className === "ladybird" && activeCards[1].className === "ladybird-word" || activeCards[0].className === "ladybird-word" && activeCards[1].className === "ladybird" ||
+                       activeCards[0].className === "crocodile" && activeCards[1].className === "crocodile-word" || activeCards[0].className === "crocodile-word" && activeCards[1].className === "crocodile" ||
+                       activeCards[0].className === "giraffe" && activeCards[1].className === "giraffe-word" || activeCards[0].className === "giraffe-word" && activeCards[1].className === "giraffe" ||
+                       activeCards[0].className === "kangaroo" && activeCards[1].className === "kangaroo-word" || activeCards[0].className === "kangaroo-word" && activeCards[1].className === "kangaroo" ||
+                       activeCards[0].className === "monkey" && activeCards[1].className === "monkey-word" || activeCards[0].className === "monkey-word" && activeCards[1].className === "monkey" ||
+                       activeCards[0].className === "parrot" && activeCards[1].className === "parrot-word" || activeCards[0].className === "parrot-word" && activeCards[1].className === "parrot" ||
+                       activeCards[0].className === "pig" && activeCards[1].className === "pig-word" || activeCards[0].className === "pig-word" && activeCards[1].className === "pig" ||
+                       activeCards[0].className === "squirrel" && activeCards[1].className === "squirrel-word" || activeCards[0].className === "squirrel-word" && activeCards[1].className === "squirrel" ||
+                       activeCards[0].className === "turtle" && activeCards[1].className === "turtle-word" || activeCards[0].className === "turtle-word" && activeCards[1].className === "turtle")
                          {
                              activeCards.forEach( e => e.classList.add("off"));
                              gameLength++;
 
                                    if(gameLength == cardPairs)
                                    {
-                                               const playTime = (new Date().getTime() - `${currentTime}` - 5000) / 1000;
+                                               const playTime = (new Date().getTime() - `${currentTime}` - 10000) / 1000;
                                                timer.textContent = Math.floor( playTime );
                                                const playTimeRound = Math.round( playTime * 100) /100;
                                                document.querySelector(".flash-card").style.border = "0";
@@ -78,12 +90,11 @@ const clickedCard = function()
                                              {
                                                    if (window.innerWidth < window.innerHeight)   document.querySelector(".game-time").textContent = "Czas: "+ ` ${playTimeRound}` + " sekund";
                                                    else  document.querySelector(".game-time").textContent = "Twój czas: "+ ` ${playTimeRound}` + " sekund";
-                                                   document.querySelector(".container-level-four").style.display = "none";
-                                                   document.querySelector(".summary-level-four").style.display = "flex";
+                                                   document.querySelector(".container-level-six").style.display = "none";
+                                                   document.querySelector(".summary-level-six").style.display = "flex";
                                                    document.querySelector("body").style.backgroundColor = "black";
-                                                   document.querySelector(".previous").addEventListener("click", () => location.href = "level3.html");
+                                                   document.querySelector(".previous").addEventListener("click", () => location.href = "level5.html");
                                                    document.querySelector(".again").addEventListener("click", () => location.reload() );
-                                                   document.querySelector(".next").addEventListener("click", () => location.href= "level5.html");
                                              }, 250)
                                      }
                          }
@@ -116,7 +127,7 @@ const randomCards = () =>
           {
              cards.forEach(e => e.classList.add("hidden"));
              cards.forEach(e => e.addEventListener("click", clickedCard));
-          }, 5000)
+          }, 10000)
 }
 
 randomCards();

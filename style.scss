@@ -215,6 +215,86 @@ footer
    @include ladybird-word;
 }
 
+.crocodile
+{
+   @include crocodile;
+}
+
+.crocodile-word
+{
+   @include crocodile-word;
+}
+
+.giraffe
+{
+   @include giraffe;
+}
+
+.giraffe-word
+{
+   @include giraffe-word;
+}
+
+.kangaroo
+{
+   @include kangaroo;
+}
+
+.kangaroo-word
+{
+   @include kangaroo-word;
+}
+
+.monkey
+{
+   @include monkey;
+}
+
+.monkey-word
+{
+   @include monkey-word;
+}
+
+.parrot
+{
+   @include parrot;
+}
+
+.parrot-word
+{
+   @include parrot-word;
+}
+
+.pig
+{
+   @include pig;
+}
+
+.pig-word
+{
+   @include pig-word;
+}
+
+.squirrel
+{
+   @include squirrel;
+}
+
+.squirrel-word
+{
+   @include squirrel-word;
+}
+
+.turtle
+{
+   @include turtle;
+}
+
+.turtle-word
+{
+   @include turtle-word;
+}
+
 
 
 
@@ -223,18 +303,69 @@ footer
 
 .summary
 {
-   position: absolute;
-   top: 10%;
-   left:  7.5%;
-   width: 85%;
-   height: 80%;
-   z-index: 100;
-   display: none;
-   animation: opacity 2s linear;
-   flex-direction: column;
-  align-items: center;
-  animation: opacity 1s linear;
-  @include summary;
+  display: none;
+  justify-content: center;
+  margin: 20vh auto;
+  width: 340px;
+  height: 400px;
+  animation: opacity 2s linear;
+ animation: opacity 1s linear;
+
+             .photos-section
+             {
+                     width: 300px;
+                     height: 240px;
+                     position: absolute;
+                     bottom: 25vh;
+                     display: flex;
+                     flex-direction: column;
+                     margin:  0 auto 40px;
+
+
+                     span
+                     {
+                       width: 300px;
+                       height: 240px;
+                       font-size: 40px;
+                       display: flex;
+                       justify-content: center;
+                       align-items: center;
+
+                           img
+                           {
+                              width: 100px;
+                              height: 100px;
+                           }
+                     }
+               }
+
+             .buttons
+             {
+               width: 300px;
+               height: 100px;
+               display: flex;
+               flex-direction: row;
+               justify-content: center;
+               align-items: center;
+               position: absolute;
+               bottom: 10vh;
+
+                          button
+                          {
+                                border-radius: 50%;
+                                border: 0;
+                                width: 100px;
+                                height: 100px;
+                                margin: 0 5px;
+                                cursor: pointer;
+                                background-color: transparent;
+                          }
+
+                       button:nth-child(3)
+                       {
+                          transform: rotateY(180deg);
+                       }
+            }
 }
 
 .lvl
@@ -498,26 +629,69 @@ footer
 
 .summary-level-two
 {
-           position: absolute;
-           top: 10%;
-           left:  7.5%;
-           width: 85%;
-           height: 80%;
-           z-index: 100;
-           display: none;
-           animation: opacity 2s linear;
-           flex-direction: column;
-          align-items: center;
-          animation: opacity 1s linear;
-         @include summary;
-                  .buttons
-                  {
-                     bottom: 5vh;
-                  }
-                  .photos-section
-                  {
-                    height: 255px;
-                  }
+  display: none;
+  justify-content: center;
+  margin: 20vh auto;
+  width: 340px;
+  height: 400px;
+  animation: opacity 2s linear;
+ animation: opacity 1s linear;
+
+             .photos-section
+             {
+                     width: 300px;
+                     height: 240px;
+                     position: absolute;
+                     bottom: 30vh;
+                     display: flex;
+                     flex-direction: column;
+                     margin:  0 auto 40px;
+
+
+                     span
+                     {
+                       width: 300px;
+                       height: 240px;
+                       font-size: 40px;
+                       display: flex;
+                       justify-content: center;
+                       align-items: center;
+
+                           img
+                           {
+                              width: 100px;
+                              height: 100px;
+                           }
+                     }
+               }
+
+             .buttons
+             {
+               width: 300px;
+               height: 100px;
+               display: flex;
+               flex-direction: row;
+               justify-content: center;
+               align-items: center;
+               position: absolute;
+               bottom: 10vh;
+
+                          button
+                          {
+                                border-radius: 50%;
+                                border: 0;
+                                width: 100px;
+                                height: 100px;
+                                margin: 0 5px;
+                                cursor: pointer;
+                                background-color: transparent;
+                          }
+
+                       button:nth-child(3)
+                       {
+                          transform: rotateY(180deg);
+                       }
+            }
 }
 
 @media (orientation: portrait)
@@ -1212,7 +1386,262 @@ footer
 
 // level 6
 
+.container-level-six
+{
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2vh;
 
+       .flash-card
+       {
+           width: 45%;
+           height: 95%;
+           display: flex;
+           flex-wrap: wrap;
+           border: 3px solid black;
+
+                div
+                {
+                    width: calc(100% /6);
+                    height: calc(100% /6);
+                }
+
+                div:nth-child(1), div:nth-child(2), div:nth-child(3), div:nth-child(4), div:nth-child(5) ,
+                div:nth-child(7), div:nth-child(8), div:nth-child(9), div:nth-child(10), div:nth-child(11),
+                div:nth-child(13), div:nth-child(14), div:nth-child(15), div:nth-child(16), div:nth-child(17) ,
+                 div:nth-child(19), div:nth-child(20), div:nth-child(21), div:nth-child(22) , div:nth-child(23),
+                 div:nth-child(25), div:nth-child(26), div:nth-child(27), div:nth-child(28), div:nth-child(29),
+                {
+                   border-right: 2px solid $color-border-flash-card;
+                   border-bottom: 2px solid $color-border-flash-card;
+                }
+
+                div:nth-child(6), div:nth-child(12), div:nth-child(18), div:nth-child(24), div:nth-child(30)
+                {
+                   border-bottom: 2px solid $color-border-flash-card;
+                }
+
+                div:nth-child(31), div:nth-child(32), div:nth-child(33), div:nth-child(34), div:nth-child(35)
+                {
+                   border-right: 2px solid $color-border-flash-card;
+                }
+       }
+}
+
+@media (orientation: portrait)
+{
+      .container-level-six
+      {
+              .flash-card
+              {
+                    width: 95%;
+                    height: 85%;
+              }
+      }
+}
+
+.summary-level-six
+{
+          display: none;
+          justify-content: center;
+          margin: 10vh auto;
+          width: 360px;
+          height: 400px;
+          animation: opacity 2s linear;
+         animation: opacity 1s linear;
+
+
+              .photos-section
+                {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                font-size: 20px;
+
+                      .left-side, .middle, .right-side,
+                      {
+                         display: flex;
+                         flex-direction: column;
+                         width: 32%;
+                         height: 400px;
+                      }
+
+                      span
+                      {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 18px;
+
+                            img
+                            {
+                              width: 60px;
+                              height: 60px;
+                            }
+                      }
+              }
+
+              .buttons
+              {
+                width: 300px;
+                height: 100px;
+                position: absolute;
+                bottom: 10vh;
+
+                     button
+                     {
+                       width: 30%;
+                       height: 100%;
+                       background-color: transparent;
+                       border: 0;
+                       cursor: pointer;
+                     }
+
+                     button:nth-child(3)
+                     {
+                        transform: rotateY(180deg);
+                     }
+              }
+}
+
+@media (orientation: portrait)
+{
+     .summary-level-six
+     {
+        margin: 5vh auto;
+
+          .buttons
+          {
+              width: 225px;
+              height: 225px;
+              bottom: -5vh;
+          }
+     }
+}
+
+@media (orientation: landscape) and (max-width: 740px)
+{
+     .summary-level-six
+      {
+          height: 300px;
+          margin: 0 auto;
+                .photos-section
+                {
+                      .left-side, .middle, .right-side
+                      {
+                        width: 150px;
+                            img
+                            {
+                               width: 40px;
+                               height: 40px;
+                            }
+                      }
+                }
+
+                .buttons
+                {
+                   width: 150px;
+                   height: 50px;
+                }
+      }
+}
+
+@media (width: 960px) and (height:600px)
+{
+    .summary-level-six
+    {
+        margin: 0 auto;
+    }
+}
+
+@media (width: 320px)
+{
+      .summary-level-six
+      {
+         width: 290px;
+      }
+
+      .summary-level-six .photos-section
+      {
+         width: 290px;
+      }
+
+      .summary-level-six .left-side, .middle, .right-side
+      {
+         width: 90px !important;
+      }
+
+      .summary-level-six .buttons
+      {
+         bottom: -8vh;
+      }
+}
+
+@media (width: 568px)
+{
+    .summary-level-six .buttons
+    {
+        bottom: 0;
+    }
+}
+
+
+
+
+
+
+
+.timer
+{
+   width: 50px;
+   height: 50px;
+   position: absolute;
+   top: 20vh;
+   left: 88.5%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 30px;
+   padding: 25px;
+   border-radius: 50%;
+}
+
+@media (orientation: portrait)
+{
+    .timer
+    {
+        top: 2vh;
+        left: 5%;
+    }
+}
+
+.game-time
+{
+  position: absolute;
+  top: 27.5%;
+  left: 85%;
+  text-align: center;
+}
+
+@media (min-width: 1500px)
+{
+     .game-time
+     {
+        left: 86%;
+     }
+}
+
+@media (orientation: portrait)
+{
+     .game-time
+     {
+         top: 11vh;
+         left: 0.5%;
+     }
+}
 
 
 
