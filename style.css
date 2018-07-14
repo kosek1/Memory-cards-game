@@ -391,7 +391,7 @@ footer {
   padding-top: 5px;
   z-index: 1000;
   border: 1px solid black;
-  animation: opacity 1s linear; }
+  animation: expand  0.3s linear; }
   .window-levels-on a {
     text-decoration: none;
     color: black; }
@@ -402,12 +402,46 @@ footer {
       border-radius: 50%;
       border: 0;
       cursor: pointer;
-      background: linear-gradient(to bottom right, green, lightgreen);
       font-weight: bold;
       font-size: 30px;
-      display: none; }
+      display: none;
+      box-shadow: 0 0 2px black;
+      animation: 1s opacity ease; }
       .window-levels-on a .level-button:hover {
         transform: scale(1.06); }
+  .window-levels-on a:nth-child(1) .level-button, .window-levels-on a:nth-child(2) .level-button, .window-levels-on a:nth-child(3) .level-button {
+    background: linear-gradient(to bottom right, green, lightgreen); }
+  .window-levels-on a:nth-child(4) .level-button, .window-levels-on a:nth-child(5) .level-button {
+    background: linear-gradient(to bottom right, yellow, orange); }
+  .window-levels-on a:nth-child(6) .level-button {
+    background: linear-gradient(to bottom right, red, #de0129); }
+  .window-levels-on .legend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vh;
+    color: black; }
+    .window-levels-on .legend .dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      margin-right: 2px; }
+    .window-levels-on .legend .easy {
+      display: inline-flex; }
+      .window-levels-on .legend .easy .dot {
+        margin-left: 1px;
+        background: linear-gradient(to bottom right, green, lightgreen); }
+    .window-levels-on .legend .medium {
+      display: inline-flex; }
+      .window-levels-on .legend .medium .dot {
+        background: linear-gradient(to bottom right, yellow, orange); }
+    .window-levels-on .legend .hard {
+      display: inline-flex; }
+      .window-levels-on .legend .hard .dot {
+        margin-left: 5px;
+        background: linear-gradient(to bottom right, red, #de0129); }
 
 .level-button-on {
   display: block !important; }
@@ -434,11 +468,15 @@ footer {
 
   .window-levels-on {
     width: 20%;
-    left: calc(95% - 20%); }
+    left: calc(95% - 20%);
+    background: #282829; }
     .window-levels-on a .level-button {
       width: 25px;
       height: 25px;
-      font-size: 15px; } }
+      font-size: 15px; }
+    .window-levels-on .legend {
+      color: white;
+      padding-bottom: 2vh; } }
 @media (max-width: 359px) {
   .window-levels-on a .level-button {
     width: 21px;
@@ -936,9 +974,11 @@ footer {
       border-right: 2px solid #aaa; }
 
 @media (orientation: portrait) {
-  .container-level-six .flash-card {
-    width: 95%;
-    height: 85%; } }
+  .container-level-six {
+    margin-top: 0; }
+    .container-level-six .flash-card {
+      width: 95%;
+      height: 85%; } }
 .summary-level-six {
   display: none;
   justify-content: center;
@@ -1051,3 +1091,10 @@ footer {
     opacity: 0; }
   100% {
     opacity: 1; } }
+@keyframes expand {
+  0% {
+    opacity: 0;
+    height: 0; }
+  100% {
+    opacity: 1;
+    height: 15%; } }

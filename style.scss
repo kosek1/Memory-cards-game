@@ -385,13 +385,12 @@ footer
   padding-top: 5px;
   z-index: 1000;
   border: 1px solid black;
-  animation: opacity 1s linear;
+  animation: expand  0.3s linear;
 
            a
            {
                 text-decoration: none;
                 color: black;
-
 
                   .level-button
                   {
@@ -401,17 +400,87 @@ footer
                       border-radius: 50%;
                       border: 0;
                       cursor: pointer;
-                      background: linear-gradient(to bottom right, green , lightgreen);
                       font-weight: bold;
                       font-size: 30px;
                       display: none;
+                      box-shadow: 0 0 2px black;
+                      animation: 1s opacity ease;
 
-                             &:hover
-                             {
-                                transform: scale(1.06);
-                             }
+                       &:hover
+                       {
+                          transform: scale(1.06);
+                       }
                   }
           }
+
+          a:nth-child(1), a:nth-child(2), a:nth-child(3)
+          {
+                .level-button
+                {
+                   background: linear-gradient(to bottom right, green , lightgreen);
+                }
+          }
+
+          a:nth-child(4), a:nth-child(5)
+          {
+                .level-button
+                {
+                   background: linear-gradient(to bottom right, yellow , orange);
+                }
+          }
+
+          a:nth-child(6)
+          {
+                .level-button
+                {
+                   background: linear-gradient(to bottom right, red , rgb(222, 1, 41));
+                }
+          }
+
+          .legend
+          {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 2vh;
+            color: black;
+
+              .dot
+              {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                margin-right: 2px;
+              }
+
+                  .easy {
+                      display: inline-flex;
+                      .dot
+                        {
+                            margin-left: 1px;
+                            background: linear-gradient(to bottom right, green , lightgreen)
+                        }
+                  }
+
+                  .medium{
+                       display: inline-flex;
+                         .dot
+                         {
+                            background: linear-gradient(to bottom right, yellow , orange);
+                         }
+                  }
+
+                  .hard {
+                     display: inline-flex;
+                       .dot
+                       {
+                           margin-left: 5px;
+                           background: linear-gradient(to bottom right, red , rgb(222, 1, 41) );
+                       }
+                  }
+            }
 }
 
 .level-button-on
@@ -462,6 +531,7 @@ footer
         {
           width: 20%;
           left: calc(95% - 20%);
+          background: rgb(40, 40, 41);
 
                     a
                     {
@@ -472,6 +542,11 @@ footer
                                      font-size: 15px;
                                  }
                    }
+                  .legend
+                  {
+                     color: white;
+                     padding-bottom: 2vh;
+                  }
         }
 }
 
@@ -1651,4 +1726,12 @@ footer
 {
   0% { opacity: 0;}
   100% { opacity: 1;}
+}
+
+@keyframes expand
+{
+    0% { opacity: 0;
+             height: 0;}
+    100% {opacity: 1;
+                height: 15%;}
 }
