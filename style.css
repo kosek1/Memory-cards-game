@@ -476,7 +476,8 @@ footer {
       font-size: 15px; }
     .window-levels-on .legend {
       color: white;
-      padding-bottom: 2vh; } }
+      padding-bottom: 2vh;
+      font-size: 12px; } }
 @media (max-width: 359px) {
   .window-levels-on a .level-button {
     width: 21px;
