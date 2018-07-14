@@ -976,7 +976,7 @@ footer {
 
 @media (orientation: portrait) {
   .container-level-six {
-    margin-top: 0; }
+    margin-top: -5vh; }
     .container-level-six .flash-card {
       width: 95%;
       height: 85%; } }
