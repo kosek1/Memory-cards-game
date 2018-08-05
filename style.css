@@ -19,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 50px; }
-  .level .choose-level {
+  .level .button-level {
     position: absolute;
     top: 2.5vh;
     left: calc(95% - 10%);
@@ -32,7 +32,7 @@ body {
     background-size: 50% 100%;
     background-color: transparent;
     cursor: pointer; }
-    .level .choose-level:hover {
+    .level .button-level:hover {
       transform: scale(1.01); }
 
 .container-level-one {
@@ -377,25 +377,22 @@ footer {
     .summary .buttons button:nth-child(3) {
       transform: rotateY(180deg); }
 
-.lvl {
-  display: none; }
-
-.window-levels-on {
+.level-list {
   position: absolute;
   top: 8vh;
   left: calc(95% - 10%);
   width: 10%;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 5px;
   z-index: 1000;
   border: 1px solid black;
   animation: expand  0.3s linear; }
-  .window-levels-on a {
+  .level-list a {
     text-decoration: none;
     color: black; }
-    .window-levels-on a .level-button {
+    .level-list a .level-button {
       width: 50px;
       height: 50px;
       margin: 5px;
@@ -404,18 +401,17 @@ footer {
       cursor: pointer;
       font-weight: bold;
       font-size: 30px;
-      display: none;
       box-shadow: 0 0 2px black;
       animation: 1s opacity ease; }
-      .window-levels-on a .level-button:hover {
+      .level-list a .level-button:hover {
         transform: scale(1.06); }
-  .window-levels-on a:nth-child(1) .level-button, .window-levels-on a:nth-child(2) .level-button, .window-levels-on a:nth-child(3) .level-button {
+  .level-list a:nth-child(1) .level-button, .level-list a:nth-child(2) .level-button, .level-list a:nth-child(3) .level-button {
     background: linear-gradient(to bottom right, green, lightgreen); }
-  .window-levels-on a:nth-child(4) .level-button, .window-levels-on a:nth-child(5) .level-button {
+  .level-list a:nth-child(4) .level-button, .level-list a:nth-child(5) .level-button {
     background: linear-gradient(to bottom right, yellow, orange); }
-  .window-levels-on a:nth-child(6) .level-button {
+  .level-list a:nth-child(6) .level-button {
     background: linear-gradient(to bottom right, red, #de0129); }
-  .window-levels-on .legend {
+  .level-list .legend {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -423,34 +419,28 @@ footer {
     width: 100%;
     margin-top: 2vh;
     color: black; }
-    .window-levels-on .legend .dot {
+    .level-list .legend .dot {
       width: 15px;
       height: 15px;
       border-radius: 50%;
       margin-right: 2px; }
-    .window-levels-on .legend .easy {
+    .level-list .legend .easy {
       display: inline-flex; }
-      .window-levels-on .legend .easy .dot {
+      .level-list .legend .easy .dot {
         margin-left: 1px;
         background: linear-gradient(to bottom right, green, lightgreen); }
-    .window-levels-on .legend .medium {
+    .level-list .legend .medium {
       display: inline-flex; }
-      .window-levels-on .legend .medium .dot {
+      .level-list .legend .medium .dot {
         background: linear-gradient(to bottom right, yellow, orange); }
-    .window-levels-on .legend .hard {
+    .level-list .legend .hard {
       display: inline-flex; }
-      .window-levels-on .legend .hard .dot {
+      .level-list .legend .hard .dot {
         margin-left: 5px;
         background: linear-gradient(to bottom right, red, #de0129); }
 
-.level-button-on {
-  display: block !important; }
-
-.window-levels-off {
-  display: none; }
-
 @media (orientation: portrait) {
-  .level .choose-level {
+  .level .button-level {
     width: 20%;
     left: calc(95% - 20%); }
   .level .active-level {
@@ -466,26 +456,26 @@ footer {
   .summary {
     top: 10%; }
 
-  .window-levels-on {
+  .level-list {
     width: 20%;
     left: calc(95% - 20%);
     background: #282829; }
-    .window-levels-on a .level-button {
+    .level-list a .level-button {
       width: 25px;
       height: 25px;
       font-size: 15px; }
-    .window-levels-on .legend {
+    .level-list .legend {
       color: white;
       padding-bottom: 2vh;
       font-size: 12px; } }
 @media (max-width: 359px) {
-  .window-levels-on a .level-button {
+  .level-list a .level-button {
     width: 21px;
     height: 21px; } }
 @media (orientation: landscape) and (max-width: 1024px) and (max-height: 480px) {
   .level .active-level {
     margin: 5px 0 0 10px; }
-  .level .choose-level {
+  .level .button-level {
     top: 2.5vh;
     left: calc(95% - 15%);
     width: 15%;
@@ -505,26 +495,26 @@ footer {
     .summary span {
       height: 0; }
 
-  .window-levels-on {
+  .level-list {
     top: 12vh;
     left: calc(95% - 15%);
     width: 15%; }
-    .window-levels-on a .level-button {
+    .level-list a .level-button {
       width: 30px;
       height: 30px;
       font-size: 20px; } }
 @media (orientation: landscape) and (max-width: 1024px) and (min-height: 480px) {
-  .level .choose-level {
+  .level .button-level {
     top: 1.5vh;
     left: calc(95% - 15%);
     width: 15%;
     height: 8vh; }
 
-  .window-levels-on {
+  .level-list {
     top: 10vh;
     left: calc(95% - 15%);
     width: 15%; }
-    .window-levels-on a .level-button {
+    .level-list a .level-button {
       width: 40px;
       height: 40px;
       font-size: 23px; } }
@@ -1087,6 +1077,9 @@ footer {
   .game-time {
     top: 11vh;
     left: 0.5%; } }
+.active-flex {
+  display: flex; }
+
 @keyframes opacity {
   0% {
     opacity: 0; }

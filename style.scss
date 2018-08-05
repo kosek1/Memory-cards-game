@@ -30,7 +30,7 @@ body
             font-size: 50px;
          }
 
-          .choose-level
+          .button-level
           {
             position: absolute;
             top: 2.5vh;
@@ -368,18 +368,14 @@ footer
             }
 }
 
-.lvl
-{
-  display: none;
-}
 
-.window-levels-on
+.level-list
 {
   position: absolute;
   top: 8vh;
   left: calc(95% - 10%);
   width: 10%;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 5px;
@@ -402,7 +398,6 @@ footer
                       cursor: pointer;
                       font-weight: bold;
                       font-size: 30px;
-                      display: none;
                       box-shadow: 0 0 2px black;
                       animation: 1s opacity ease;
 
@@ -483,22 +478,12 @@ footer
             }
 }
 
-.level-button-on
-{
-  display: block !important;
-}
-
-.window-levels-off
-{
-  display: none;
-}
-
 
 @media (orientation: portrait)
 {
   .level
   {
-         .choose-level
+         .button-level
          {
                     width: 20%;
                     left: calc(95% - 20%);
@@ -527,7 +512,7 @@ footer
             top: 10%;
         }
 
-        .window-levels-on
+        .level-list
         {
           width: 20%;
           left: calc(95% - 20%);
@@ -553,7 +538,7 @@ footer
 
 @media (max-width: 359px)
 {
-      .window-levels-on
+      .level-list
       {
                   a
                   {
@@ -574,7 +559,7 @@ footer
            {
               margin: 5px 0 0 10px;
            }
-            .choose-level
+            .button-level
             {
                     top: 2.5vh;
                     left: calc(95% - 15%);
@@ -607,7 +592,7 @@ footer
                  }
       }
 
-      .window-levels-on
+      .level-list
       {
           top: 12vh;
           left: calc(95% - 15%);
@@ -629,7 +614,7 @@ footer
 {
       .level
       {
-             .choose-level
+             .button-level
              {
                      top: 1.5vh;
                      left: calc(95% - 15%);
@@ -637,7 +622,7 @@ footer
                     height: 8vh;
              }
        }
-       .window-levels-on
+       .level-list
        {
          top: 10vh;
          left: calc(95% - 15%);
@@ -1668,9 +1653,6 @@ footer
 
 
 
-
-
-
 .timer
 {
    width: 50px;
@@ -1721,6 +1703,10 @@ footer
 }
 
 
+.active-flex
+{
+  display: flex;
+}
 
 
 @keyframes opacity
