@@ -1,8 +1,7 @@
 const cardsTab = ["cat", "cat-word", "dog", "dog-word", "cow", "cow-word", "tiger", "tiger-word" , "lion", "lion-word", "panda", "panda-word", "fox", "fox-word", "elephant",
                                  "elephant-word", "fish", "fish-word", "ladybird", "ladybird-word"];
 
-let  cards = document.querySelectorAll(".flash-card div");
-cards = [... cards];
+const cards = [...document.querySelectorAll(".flash-card div")];
 
 let activeCard = "";
 const activeCards = [];

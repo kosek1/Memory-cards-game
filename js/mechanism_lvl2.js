@@ -1,7 +1,7 @@
 const cardTab = ["dog", "dog-word", "cat", "cat-word", "cow", "cow-word"]
 
-let cards = document.querySelectorAll(".flash-card div");
-cards = [... cards];
+const cards = [...document.querySelectorAll(".flash-card div")];
+
 
 let activeCard = "";
 const activeCards = [];
@@ -86,7 +86,7 @@ const clickedCard = function()
                                               setTimeout( () =>
                                             {
                                                   if (window.innerWidth < window.innerHeight)   document.querySelector(".game-time").textContent = "Czas: "+ ` ${playTimeRound}` + " sekund";
-                                                  else  document.querySelector(".game-time").textContent = "Twój czas: "+ ` ${playTimeRound}` + " sekund";                                              
+                                                  else  document.querySelector(".game-time").textContent = "Twój czas: "+ ` ${playTimeRound}` + " sekund";
                                                   document.querySelector(".summary-level-two").style.display = "flex";
                                                   document.querySelector(".flash-card").style.display = "none";
                                                   document.querySelector("body").style.backgroundColor = "black";
