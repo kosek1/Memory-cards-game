@@ -1,8 +1,7 @@
 const button = document.querySelector(".choose-level");
 const windowLevels = document.querySelector(".window-levels-off");
 
-let level = document.querySelectorAll(".level-button");
-level = [... level];
+const level = [...document.querySelectorAll(".level-button")];
 
 button.addEventListener("click", function()
 {
