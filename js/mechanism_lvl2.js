@@ -10,7 +10,7 @@ const cardPairs = 3;
 let  gameLength = 0;
 
 
-const currentTime = new Date().getTime();
+const currentTime = Date.now();
 
 const timer = document.querySelector(".timer");
 let second = 0;
@@ -74,7 +74,7 @@ const clickedCard = function()
 
                                   if(gameLength == cardPairs)
                                   {
-                                              const playTime = (new Date().getTime() - `${currentTime}` - 1000) / 1000;
+                                              const playTime = ( Date.now() - `${currentTime}` - 1000) / 1000;
                                               timer.textContent = Math.floor( playTime );
                                               const playTimeRound = Math.round( playTime * 100) /100;
                                               document.querySelector(".flash-card").style.border = "0";
