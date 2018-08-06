@@ -35,38 +35,63 @@ body {
     .level .button-level:hover {
       transform: scale(1.01); }
 
-.container-level-one {
-  width: 85vh;
-  height: 90vh;
-  margin: 0 auto; }
-  .container-level-one .flash-card {
-    width: 80%;
-    height: 80%;
-    margin: 3vh auto;
-    display: flex;
-    flex-wrap: wrap;
-    border: 3px solid black;
-    justify-content: center;
-    align-items: center; }
-    .container-level-one .flash-card div {
-      width: 50%;
-      height: 50%; }
-    .container-level-one .flash-card div:nth-child(1) {
-      border-right: 2px solid #aaa;
-      border-bottom: 2px solid #aaa; }
-    .container-level-one .flash-card div:nth-child(2) {
-      border-bottom: 2px solid #aaa; }
-    .container-level-one .flash-card div:nth-child(3) {
-      border-right: 2px solid #aaa; }
-
-footer {
-  width: 100%;
+.level-list {
   position: absolute;
-  bottom: 1vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px; }
+  top: 8vh;
+  left: calc(95% - 10%);
+  width: 10%;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 5px;
+  z-index: 1000;
+  border: 1px solid black;
+  animation: expand  0.3s ease-in-out; }
+  .level-list a {
+    text-decoration: none;
+    color: black; }
+    .level-list a .level-button {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      border-radius: 50%;
+      border: 0;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 30px;
+      box-shadow: 0 0 2px black;
+      animation: 1s opacity ease; }
+      .level-list a .level-button:hover {
+        transform: scale(1.06); }
+  .level-list a:nth-child(1) .level-button, .level-list a:nth-child(2) .level-button, .level-list a:nth-child(3) .level-button {
+    background: linear-gradient(to bottom right, green, lightgreen); }
+  .level-list a:nth-child(4) .level-button, .level-list a:nth-child(5) .level-button {
+    background: linear-gradient(to bottom right, yellow, orange); }
+  .level-list a:nth-child(6) .level-button {
+    background: linear-gradient(to bottom right, red, #de0129); }
+  .level-list .legend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vh;
+    color: black; }
+    .level-list .legend .dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      margin-right: 2px; }
+    .level-list .legend .easy, .level-list .legend .medium, .level-list .legend .hard {
+      display: inline-flex; }
+    .level-list .legend .easy .dot {
+      margin-left: 1px;
+      background: linear-gradient(to bottom right, green, lightgreen); }
+    .level-list .legend .medium .dot {
+      background: linear-gradient(to bottom right, yellow, orange); }
+    .level-list .legend .hard .dot {
+      margin-left: 5px;
+      background: linear-gradient(to bottom right, red, #de0129); }
 
 .hidden {
   background-image: url("img/global/background_card.svg") !important;
@@ -331,15 +356,38 @@ footer {
   background-position: center;
   background-size: 90% 200%; }
 
-.summary {
+.container-level-one {
+  width: 85vh;
+  height: 90vh;
+  margin: 0 auto; }
+  .container-level-one .flash-card {
+    width: 80%;
+    height: 80%;
+    margin: 3vh auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center; }
+    .container-level-one .flash-card div {
+      width: 50%;
+      height: 50%; }
+    .container-level-one .flash-card div:nth-child(1) {
+      border-right: 2px solid #aaa;
+      border-bottom: 2px solid #aaa; }
+    .container-level-one .flash-card div:nth-child(2) {
+      border-bottom: 2px solid #aaa; }
+    .container-level-one .flash-card div:nth-child(3) {
+      border-right: 2px solid #aaa; }
+
+.summary-level-one {
   display: none;
   justify-content: center;
   margin: 20vh auto;
   width: 340px;
   height: 400px;
-  animation: opacity 2s linear;
   animation: opacity 1s linear; }
-  .summary .photos-section {
+  .summary-level-one .photos-section {
     width: 300px;
     height: 240px;
     position: absolute;
@@ -347,17 +395,17 @@ footer {
     display: flex;
     flex-direction: column;
     margin: 0 auto 40px; }
-    .summary .photos-section span {
+    .summary-level-one .photos-section span {
       width: 300px;
       height: 240px;
       font-size: 40px;
       display: flex;
       justify-content: center;
       align-items: center; }
-      .summary .photos-section span img {
+      .summary-level-one .photos-section span img {
         width: 100px;
         height: 100px; }
-  .summary .buttons {
+  .summary-level-one .buttons {
     width: 300px;
     height: 100px;
     display: flex;
@@ -366,7 +414,7 @@ footer {
     align-items: center;
     position: absolute;
     bottom: 10vh; }
-    .summary .buttons button {
+    .summary-level-one .buttons button {
       border-radius: 50%;
       border: 0;
       width: 100px;
@@ -374,70 +422,8 @@ footer {
       margin: 0 5px;
       cursor: pointer;
       background-color: transparent; }
-    .summary .buttons button:nth-child(3) {
+    .summary-level-one .buttons button:nth-child(3) {
       transform: rotateY(180deg); }
-
-.level-list {
-  position: absolute;
-  top: 8vh;
-  left: calc(95% - 10%);
-  width: 10%;
-  display: none;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding-top: 5px;
-  z-index: 1000;
-  border: 1px solid black;
-  animation: expand  0.3s linear; }
-  .level-list a {
-    text-decoration: none;
-    color: black; }
-    .level-list a .level-button {
-      width: 50px;
-      height: 50px;
-      margin: 5px;
-      border-radius: 50%;
-      border: 0;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 30px;
-      box-shadow: 0 0 2px black;
-      animation: 1s opacity ease; }
-      .level-list a .level-button:hover {
-        transform: scale(1.06); }
-  .level-list a:nth-child(1) .level-button, .level-list a:nth-child(2) .level-button, .level-list a:nth-child(3) .level-button {
-    background: linear-gradient(to bottom right, green, lightgreen); }
-  .level-list a:nth-child(4) .level-button, .level-list a:nth-child(5) .level-button {
-    background: linear-gradient(to bottom right, yellow, orange); }
-  .level-list a:nth-child(6) .level-button {
-    background: linear-gradient(to bottom right, red, #de0129); }
-  .level-list .legend {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 2vh;
-    color: black; }
-    .level-list .legend .dot {
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      margin-right: 2px; }
-    .level-list .legend .easy {
-      display: inline-flex; }
-      .level-list .legend .easy .dot {
-        margin-left: 1px;
-        background: linear-gradient(to bottom right, green, lightgreen); }
-    .level-list .legend .medium {
-      display: inline-flex; }
-      .level-list .legend .medium .dot {
-        background: linear-gradient(to bottom right, yellow, orange); }
-    .level-list .legend .hard {
-      display: inline-flex; }
-      .level-list .legend .hard .dot {
-        margin-left: 5px;
-        background: linear-gradient(to bottom right, red, #de0129); }
 
 @media (orientation: portrait) {
   .level .button-level {
@@ -453,7 +439,7 @@ footer {
     .container-level-one .flash-card {
       margin-top: 3vh; }
 
-  .summary {
+  .summary-level-one {
     top: 10%; }
 
   .level-list {
@@ -481,18 +467,18 @@ footer {
     width: 15%;
     height: 8vh; }
 
-  .summary {
+  .summary-level-one {
     top: 50%;
     height: 160px; }
-    .summary .photos-section {
+    .summary-level-one .photos-section {
       margin: 0 10px 10vh;
       width: 300px;
       height: 180px; }
-    .summary .buttons {
+    .summary-level-one .buttons {
       bottom: -10vh;
       width: 225px;
       height: 225px; }
-    .summary span {
+    .summary-level-one span {
       height: 0; }
 
   .level-list {
@@ -1047,6 +1033,15 @@ footer {
 @media (width: 568px) {
   .summary-level-six .buttons {
     bottom: 0; } }
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px; }
+
 .timer {
   width: 50px;
   height: 50px;

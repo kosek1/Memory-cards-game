@@ -91,7 +91,7 @@ const clickedCard = function()
                                               {
                                                     if (window.innerWidth < window.innerHeight)   document.querySelector(".game-time").textContent = "Czas: "+ ` ${playTimeRound}` + " sekund";
                                                     else  document.querySelector(".game-time").textContent = "Twój czas: "+ ` ${playTimeRound}` + " sekund";
-                                                    document.querySelector(".summary").style.display = "flex";
+                                                    document.querySelector(".summary-level-one").style.display = "flex";
                                                     document.querySelector(".flash-card").style.display = "none";
                                                     document.querySelector("body").style.backgroundColor = "black";
                                                     document.querySelector(".again").addEventListener("click", () => location.reload() )
