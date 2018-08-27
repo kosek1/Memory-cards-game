@@ -101,9 +101,6 @@ body {
   background-color: #0f6a39 !important;
   animation: rotate-card 0.2s linear; }
 
-@keyframes rotate-card {
-  100% {
-    transform: rotate3d(0, 1, 0, 180deg); } }
 .off {
   background: transparent !important;
   background-repeat: repeat !important;
@@ -1051,6 +1048,9 @@ footer {
 @media (min-width: 1500px) {
   .game-time {
     left: 86%; } }
+@keyframes rotate-card {
+  100% {
+    transform: rotate3d(0, 1, 0, 180deg); } }
 @keyframes opacity {
   0% {
     opacity: 0; }
@@ -1062,4 +1062,4 @@ footer {
     height: 0; }
   100% {
     opacity: 1;
-    height: 15%; } }
+    height: 20%; } }
