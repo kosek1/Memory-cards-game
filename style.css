@@ -98,8 +98,12 @@ body {
   background-repeat: no-repeat !important;
   background-size: 80% 200% !important;
   background-position: center !important;
-  background-color: #0f6a39 !important; }
+  background-color: #0f6a39 !important;
+  animation: rotate-card 0.2s linear; }
 
+@keyframes rotate-card {
+  100% {
+    transform: rotate3d(0, 1, 0, 180deg); } }
 .off {
   background: transparent !important;
   background-repeat: repeat !important;
@@ -926,16 +930,7 @@ footer {
     width: 21px;
     height: 21px; } }
 @media (width: 568px) {
-  .summary-level-three .buttons {
-    bottom: 0; }
-
-  .summary-level-four .buttons {
-    bottom: 0; }
-
-  .summary-level-five .buttons {
-    bottom: 0; }
-
-  .summary-level-six .buttons {
+  .summary-level-three .buttons, .summary-level-four .buttons, .summary-level-five .buttons, .summary-level-six .buttons {
     bottom: 0; } }
 @media (width: 960px) and (height: 600px) {
   .summary-level-three {
