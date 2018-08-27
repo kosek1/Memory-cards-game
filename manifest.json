@@ -1,6 +1,6 @@
 {
-    "name": "Memory game for children",
-    "short_name": "Memory game",
+    "name": "Memory dla dzieci",
+    "short_name": "Memory",
     "icons": [{
       "src": "img/pwa/thumbnail.png",
       "sizes": "192x192",
@@ -11,7 +11,7 @@
       "sizes": "512x512",
       "type": "image/png"
     }],
-    
+
     "theme_color": "rgb(10, 121, 201)",
     "background_color": "rgb(10, 121, 201)",
     "display": "standalone"

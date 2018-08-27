@@ -807,7 +807,7 @@ footer {
     width: 100%;
     max-height: 80vh; }
     .container-level-one .flash-card {
-      margin-top: 3vh; }
+      margin-top: 8vh; }
 
   .summary-level-one {
     top: 10%; }
@@ -819,7 +819,7 @@ footer {
       width: 100%; }
 
   .summary-level-two .buttons {
-    bottom: 1vh; }
+    bottom: 4vh; }
   .summary-level-two .photos-section {
     height: 140px; }
     .summary-level-two .photos-section span img {
@@ -829,13 +829,13 @@ footer {
   .container-level-three {
     width: 100%;
     height: 60vh;
-    margin: 0 auto; }
+    margin: 5vh auto 0; }
     .container-level-three .flash-card {
       width: 95%;
       height: 90%; }
 
   .summary-level-three {
-    margin: 5vh auto; }
+    margin: 8vh auto; }
     .summary-level-three .buttons {
       width: 225px;
       height: 225px;
@@ -849,35 +849,35 @@ footer {
     height: 70%; }
 
   .summary-level-four {
-    margin: 2vh auto; }
+    margin: 7vh auto; }
     .summary-level-four .buttons {
       width: 225px;
       height: 225px;
-      bottom: 0; }
+      bottom: 4vh; }
 
   .container-level-five .flash-card {
     width: 95%;
     height: 70%; }
 
   .summary-level-five {
-    margin: 2vh auto; }
+    margin: 6vh auto; }
     .summary-level-five .buttons {
       width: 225px;
       height: 225px;
-      bottom: -5vh; }
+      bottom: -1vh; }
 
   .container-level-six {
-    margin-top: -5vh; }
+    margin-top: -1vh; }
     .container-level-six .flash-card {
       width: 95%;
       height: 85%; }
 
   .summary-level-six {
-    margin: 5vh auto; }
+    margin: 8vh auto; }
     .summary-level-six .buttons {
       width: 225px;
       height: 225px;
-      bottom: -5vh; }
+      bottom: -8vh; }
 
   .timer {
     top: 2vh;
