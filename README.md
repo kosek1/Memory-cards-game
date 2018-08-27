@@ -1,4 +1,9 @@
-# Memory
+# Memory game - animals 
 
+<h1>https://kosek1.github.io/memory</h1>
 
-https://kosek1.github.io/memory
+Memory game for children with animals photos.
+Photos are from pixabay.
+App has PWA.
+
+#html5, css3, scss, js, gulp
