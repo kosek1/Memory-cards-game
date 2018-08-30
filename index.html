@@ -5,25 +5,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Gra dla dzieci - memory po angielsku!</title>
-        <link rel="stylesheet" href="style.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
         <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
-           <div class="level">
-                      <button class="button-level"></button>
-                       <div class="active-level">
-                             Poziom 1
-                       </div>
-           </div>
+           <header class="topbar">
+                   <div class="container-fluid">
+                            <div class="row">
+                                     <div class="col-3 d-flex justify-content-center my-3">
+                                           <div class="timer d-flex justify-content-center align-items-center"></div>
+                                     </div>
+
+                                     <div class="col-6 my-3">
+                                          <h1 class="d-flex justify-content-center my-topbar-header text-center">Poziom 1</h1>
+                                     </div>
+
+                                     <div class="col-3 d-flex justify-content-center align-items-start my-3 my-topbar-buttons">
+                                           <button class="btn bg-transparent btn-lg text-dark d-md-none change-level-button"><span class="fas fa-bars"></span></button>
+                                           <button class="btn bg-transparent border-3 border-secondary btn-lg text-dark d-none d-md-block change-level my-change-level-button"><span class="text-uppercase">Level</span></button>
+                                     </div>
+                            </div>
+                   </div>
+           </header>
 
            <div class="level-list">
-                   <a href="index.html"> <button class="level-button">1</button> </a>
-                   <a href="level2.html"> <button class="level-button">2</button> </a>
-                   <a href="level3.html"> <button class="level-button">3</button> </a>
-                   <a href="level4.html"> <button class="level-button">4</button> </a>
-                   <a href="level5.html"> <button class="level-button">5</button> </a>
-                   <a href="level6.html"> <button class="level-button">6</button> </a>
+                <div class="row d-flex justify-content-around no-gutters m-0">
+                         <div class="col-4 d-flex justify-content-center"><a href="index.html"> <button class="level-button gradient-green">1</button> </a></div>
+                         <div class="col-4 d-flex justify-content-center"><a href="level2.html"> <button class="level-button gradient-green">2</button> </a></div>
+                         <div class="col-4 d-flex justify-content-center"><a href="level3.html"> <button class="level-button gradient-green">3</button> </a></div>
+                         <div class="col-4 d-flex justify-content-center"><a href="level4.html"> <button class="level-button gradient-yellow">4</button> </a></div>
+                         <div class="col-4 d-flex justify-content-center"><a href="level5.html"> <button class="level-button gradient-yellow">5</button> </a></div>
+                         <div class="col-4 d-flex justify-content-center"><a href="level6.html"> <button class="level-button gradient-red">6</button> </a></div>
+                </div>
                    <div class="legend">
                            <div class="easy"><div class="dot"></div>Łatwy</div>
                            <div class="medium"><div class="dot"></div>Średni</div>
@@ -56,10 +73,10 @@
 
 
              <div class="game-time"></div>
-             <div class="timer"></div>
 
 
-          <script src="js/mechanism.js"></script>
+
+          <script src="js/lvl1.js"></script>
           <script src="js/change_level.js"></script>
 </body>
 </html>

@@ -9,88 +9,68 @@
 body {
   background: linear-gradient(to bottom right ,  rgb(230, 34, 75) ,  orange , yellow, rgb(143, 255, 0));
   background-size:  102% 105vh;
+  max-width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  font-family: 'Merriweather', serif;
 }
 
 // top bar active level + button to choose lvl from list
 
-.level {
-   width: 100%;
+.topbar {
    height: 10vh;
-   position: relative;
-         .active-level {
-           margin-left: 1%;
-            width: 100%;
-            height: 10vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 50px;
-         }
-         .button-level {
-           position: absolute;
-           top: 2.5vh;
-           left: calc(95% - 10%);
-           width: 10%;
-           height: 5vh;
-           border: 1px solid black;
-           background-image: url('img/global/change_level_button_black.png');
-           background-position: center;
-           background-repeat: no-repeat;
-           background-size: 50% 100%;
-           background-color: transparent;
-           cursor: pointer;
-               &:hover {
-                   transform: scale(1.01);
+      .timer {
+         width: 50px;
+         height: 50px;
+         border: 1px solid black;
+         border-radius: 50%;
+         font-family: arial;
+         font-size: 30px;
+         font-family: Times New Roman;
+      }
+      .my-topbar-header{
+         font-size: 2.7rem;
+      }
+       .change-level-button{
+                 span {
+                  font-size: 5vh;
                }
           }
+        .my-change-level-button{
+            width: 10vw;
+        }
 }
 
 .level-list {
   position: absolute;
   top: 8vh;
-  left: calc(95% - 10%);
-  width: 10%;
+  left: 82vw;
+  width: 10vw;
   display: none;
   flex-wrap: wrap;
-  justify-content: space-around;
   padding-top: 5px;
   z-index: 1000;
-  border: 1px solid black;
   animation: expand  0.3s ease-in-out;
+  font-family: arial;
         a{
           text-decoration: none;
           color: black;
               .level-button {
-                  width: 50px;
-                  height: 50px;
+                  width: 40px;
+                  height: 40px;
                   margin: 5px;
                   border-radius: 50%;
                   border: 0;
                   cursor: pointer;
                   font-weight: bold;
-                  font-size: 30px;
                   box-shadow: 0 0 2px black;
                   animation: 1s opacity ease;
                       &:hover {
-                         transform: scale(1.06);
+                         transform: scale(1.1);
                       }
                 }
           }
-          a:nth-child(1), a:nth-child(2), a:nth-child(3) {
-                .level-button {
-                   background: linear-gradient(to bottom right, green , lightgreen);
-                }
-          }
-          a:nth-child(4), a:nth-child(5) {
-                .level-button {
-                   background: linear-gradient(to bottom right, yellow , orange);
-                }
-          }
-          a:nth-child(6) {
-                .level-button {
-                   background: linear-gradient(to bottom right, red , rgb(222, 1, 41));
-                }
-          }
+
           .legend {
             display: flex;
             flex-direction: column;
@@ -111,23 +91,32 @@ body {
                 .easy {
                     .dot {
                           margin-left: 1px;
-                          background: linear-gradient(to bottom right, green , lightgreen)
+                          @include gradient-green;
                       }
                   }
                   .medium{
                       .dot {
-                         background: linear-gradient(to bottom right, yellow , orange);
+                         @include gradient-yellow;
                       }
                   }
                   .hard {
                        .dot {
                            margin-left: 5px;
-                           background: linear-gradient(to bottom right, red , rgb(222, 1, 41) );
+                           @include gradient-red;
                        }
                   }
           }
 }
 
+.gradient-green {
+    @include gradient-green;
+}
+.gradient-yellow {
+    @include gradient-yellow;
+}
+.gradient-red {
+    @include gradient-red;
+}
 
 // animals-images-from mixins.scss
 
@@ -739,20 +728,6 @@ body {
             }
 }
 
-.timer {
-   width: 50px;
-   height: 50px;
-   position: absolute;
-   top: 20vh;
-   left: 88.5%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-size: 30px;
-   padding: 25px;
-   border-radius: 50%;
-}
-
 .game-time {
   position: absolute;
   top: 27.5%;
@@ -768,34 +743,30 @@ body {
 
 
 // #media
-@media (orientation: portrait) {
-      .level {
-          .button-level {
-                     width: 20%;
-                     left: calc(95% - 20%);
-          }
-          .active-level {
-            font-size: 40px;
-          }
+@media (orientation: portrait) and (max-width: 767px){
+      .topbar{
+            .my-topbar-header{
+               font-size: 2rem;
+            }
       }
 
-      .level-list
-      {
-        width: 20%;
-        left: calc(95% - 20%);
-        background: rgb(40, 40, 41);
-              a {
-                  .level-button {
-                      width: 25px;
-                      height: 25px;
-                      font-size: 15px;
-                  }
-             }
-             .legend {
-                color: white;
-                padding-bottom: 2vh;
-                font-size: 12px;
-             }
+      .level-list {
+         width: 40vw;
+         left: 30vw;
+         top: 10vh;
+         background-color: rgb(0, 0, 0);
+         padding: 15px;
+         border-radius: 15px;
+           a {
+                .level-button {
+                     width: 30px;
+                     height: 30px;
+                     margin: 15px;
+                }
+           }
+           .legend {
+               color: white;
+           }
       }
 
           // #level1 - portrait
@@ -917,12 +888,6 @@ body {
                     }
               }
 
-              // #timer - portrait
-              .timer {
-                  top: 2vh;
-                  left: 5%;
-              }
-
               // #game-time - portrait
               .game-time {
                   top: 11vh;
@@ -979,16 +944,7 @@ body {
             }
       }
 }
-@media (max-width: 359px) {
-    .level-list {
-          a {
-              .level-button {
-                  width: 21px;
-                  height: 21px;
-              }
-         }
-    }
-}
+
 @media (width: 568px) {
     .summary-level-three .buttons, .summary-level-four .buttons, .summary-level-five .buttons, .summary-level-six .buttons{
         bottom: 0;
@@ -1101,19 +1057,6 @@ body {
                height: 8vh;
           }
        }
-
-       .level-list {
-         top: 10vh;
-         left: calc(95% - 15%);
-         width: 15%;
-             a {
-                 .level-button {
-                     width: 40px;
-                     height: 40px;
-                     font-size: 23px;
-                 }
-             }
-        }
 }
 @media (orientation: landscape) and (max-width: 1024px) and (max-height: 480px) {
      .level {
@@ -1145,20 +1088,19 @@ body {
                     height: 0;
                }
       }
-
-      .level-list {
-          top: 12vh;
-          left: calc(95% - 15%);
-          width: 15%;
-              a {
-                  .level-button {
-                      width: 30px;
-                      height: 30px;
-                      font-size: 20px;
-                  }
-             }
-      }
 }
+
+@media (min-width: 768px) and (max-width: 1250px) {
+    .level-list {
+        a {
+            .level-button {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
 @media (min-width: 1500px) {
      .game-time {
         left: 86%;

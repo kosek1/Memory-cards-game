@@ -1,6 +1,6 @@
 @mixin hidden
 {
-    background-image: url('img/global/background_card.svg') !important;
+    background-image: url('../img/global/background_card.svg') !important;
     background-repeat: no-repeat !important;
     background-size: 80% 200% !important ;
     background-position: center !important;
@@ -16,7 +16,7 @@
 
 @mixin cat
 {
-    background-image: url('img/level1/cat.svg');
+    background-image: url('../img/level1/cat.svg');
     background-repeat: no-repeat;
    background-size: 100% 100%;
    background-color: $color-background-animals;
@@ -24,7 +24,7 @@
 
 @mixin cat-word
 {
-  background-image: url('img/level1/cat_word.png');
+  background-image: url('../img/level1/cat_word.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
@@ -33,7 +33,7 @@
 
 @mixin dog
 {
-  background-image: url('img/level1/dog.svg');
+  background-image: url('../img/level1/dog.svg');
   background-repeat: no-repeat;
  background-size: 115% 105%;
  background-position: center;
@@ -42,7 +42,7 @@
 
 @mixin dog-word
 {
-  background-image: url('img/level1/dog_word.png');
+  background-image: url('../img/level1/dog_word.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 65%;
@@ -51,7 +51,7 @@
 
 @mixin cow
 {
-   background-image: url('img/level2/cow.svg');
+   background-image: url('../img/level2/cow.svg');
    background-repeat: no-repeat;
    background-color:  $color-background-animals;
    background-position: center;
@@ -60,7 +60,7 @@
 
 @mixin cow-word
 {
-    background-image: url('img/level2/cow_word.png');
+    background-image: url('../img/level2/cow_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -69,7 +69,7 @@
 
 @mixin tiger
 {
-    background-image: url('img/level3/tiger.svg');
+    background-image: url('../img/level3/tiger.svg');
     background-repeat: no-repeat;
     background-color:  $color-background-animals;
     background-position: center;
@@ -78,7 +78,7 @@
 
 @mixin tiger-word
 {
-    background-image: url('img/level3/tiger_word.png');
+    background-image: url('../img/level3/tiger_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -87,7 +87,7 @@
 
 @mixin panda
 {
-    background-image: url('img/level3/panda.png');
+    background-image: url('../img/level3/panda.png');
     background-repeat: no-repeat;
     background-color:  $color-background-animals;
     background-position: center;
@@ -96,7 +96,7 @@
 
 @mixin panda-word
 {
-    background-image: url('img/level3/panda_word.png');
+    background-image: url('../img/level3/panda_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -105,7 +105,7 @@
 
 @mixin lion
 {
-    background-image: url('img/level3/lion.svg');
+    background-image: url('../img/level3/lion.svg');
     background-repeat: no-repeat;
     background-color:  $color-background-animals;
     background-position: center;
@@ -114,7 +114,7 @@
 
 @mixin lion-word
 {
-    background-image: url('img/level3/lion_word.png');
+    background-image: url('../img/level3/lion_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -123,7 +123,7 @@
 
 @mixin fox
 {
-    background-image: url('img/level4/fox.svg');
+    background-image: url('../img/level4/fox.svg');
     background-repeat: no-repeat;
     background-color: $color-background-animals;
     background-position: center;
@@ -132,7 +132,7 @@
 
 @mixin fox-word
 {
-    background-image: url('img/level4/fox_word.png');
+    background-image: url('../img/level4/fox_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -141,7 +141,7 @@
 
 @mixin elephant
 {
-    background-image: url('img/level4/elephant.svg');
+    background-image: url('../img/level4/elephant.svg');
     background-repeat: no-repeat;
     background-color: $color-background-animals;
     background-position: center;
@@ -150,7 +150,7 @@
 
 @mixin elephant-word
 {
-    background-image: url('img/level4/elephant_word.png');
+    background-image: url('../img/level4/elephant_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -159,7 +159,7 @@
 
 @mixin fish
 {
-    background-image: url('img/level5/fish.svg');
+    background-image: url('../img/level5/fish.svg');
     background-repeat: no-repeat;
     background-color: $color-background-animals;
     background-position: center;
@@ -168,7 +168,7 @@
 
 @mixin fish-word
 {
-    background-image: url('img/level5/fish_word.png');
+    background-image: url('../img/level5/fish_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -177,7 +177,7 @@
 
 @mixin ladybird
 {
-    background-image: url('img/level5/ladybird.svg');
+    background-image: url('../img/level5/ladybird.svg');
     background-repeat: no-repeat;
     background-color: $color-background-animals;
     background-position: center;
@@ -186,7 +186,7 @@
 
 @mixin ladybird-word
 {
-    background-image: url('img/level5/ladybird_word.png');
+    background-image: url('../img/level5/ladybird_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -195,7 +195,7 @@
 
 @mixin crocodile
 {
-    background-image: url('img/level6/crocodile.svg');
+    background-image: url('../img/level6/crocodile.svg');
     background-repeat: no-repeat;
     background-color: $color-background-animals;
     background-position: center;
@@ -204,7 +204,7 @@
 
 @mixin crocodile-word
 {
-    background-image: url('img/level6/crocodile_word.png');
+    background-image: url('../img/level6/crocodile_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -213,7 +213,7 @@
 
 @mixin giraffe
 {
-    background-image: url('img/level6/giraffe.svg');
+    background-image: url('../img/level6/giraffe.svg');
     background-repeat: no-repeat;
     background-color: $color-background-animals;
     background-position: center;
@@ -222,7 +222,7 @@
 
 @mixin giraffe-word
 {
-    background-image: url('img/level6/giraffe_word.png');
+    background-image: url('../img/level6/giraffe_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -231,7 +231,7 @@
 
 @mixin kangaroo
 {
-    background-image: url('img/level6/kangaroo.svg');
+    background-image: url('../img/level6/kangaroo.svg');
     background-repeat: no-repeat;
     background-color: $color-background-animals;
     background-position: center;
@@ -240,7 +240,7 @@
 
 @mixin kangaroo-word
 {
-    background-image: url('img/level6/kangaroo_word.png');
+    background-image: url('../img/level6/kangaroo_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -249,7 +249,7 @@
 
 @mixin monkey
 {
-    background-image: url('img/level6/monkey.svg');
+    background-image: url('../img/level6/monkey.svg');
     background-repeat: no-repeat;
     background-color: $color-background-animals;
     background-position: center;
@@ -258,7 +258,7 @@
 
 @mixin monkey-word
 {
-    background-image: url('img/level6/monkey_word.png');
+    background-image: url('../img/level6/monkey_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -267,7 +267,7 @@
 
 @mixin parrot
 {
-    background-image: url('img/level6/parrot.svg');
+    background-image: url('../img/level6/parrot.svg');
     background-repeat: no-repeat;
     background-color: $color-background-animals;
     background-position: center;
@@ -276,7 +276,7 @@
 
 @mixin parrot-word
 {
-    background-image: url('img/level6/parrot_word.png');
+    background-image: url('../img/level6/parrot_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -285,7 +285,7 @@
 
 @mixin pig
 {
-    background-image: url('img/level6/pig.svg');
+    background-image: url('../img/level6/pig.svg');
     background-repeat: no-repeat;
     background-color: $color-background-animals;
     background-position: center;
@@ -294,7 +294,7 @@
 
 @mixin pig-word
 {
-    background-image: url('img/level6/pig_word.png');
+    background-image: url('../img/level6/pig_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -303,7 +303,7 @@
 
 @mixin squirrel
 {
-    background-image: url('img/level6/squirrel.svg');
+    background-image: url('../img/level6/squirrel.svg');
     background-repeat: no-repeat;
     background-color: $color-background-animals;
     background-position: center;
@@ -312,7 +312,7 @@
 
 @mixin squirrel-word
 {
-    background-image: url('img/level6/squirrel_word.png');
+    background-image: url('../img/level6/squirrel_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
@@ -321,7 +321,7 @@
 
 @mixin turtle
 {
-    background-image: url('img/level6/turtle.svg');
+    background-image: url('../img/level6/turtle.svg');
     background-repeat: no-repeat;
     background-color: $color-background-animals;
     background-position: center;
@@ -330,11 +330,23 @@
 
 @mixin turtle-word
 {
-    background-image: url('img/level6/turtle_word.png');
+    background-image: url('../img/level6/turtle_word.png');
     background-repeat: no-repeat;
     background-color: $color-background-word;
     background-position: center;
     background-size: 90% 200%;
+}
+
+@mixin gradient-green {
+      background: linear-gradient(to bottom right, green , lightgreen);
+}
+
+@mixin gradient-yellow {
+     background: linear-gradient(to bottom right, yellow , orange);
+}
+
+@mixin gradient-red {
+     background: linear-gradient(to bottom right, red , rgb(222, 1, 41));
 }
 
 
