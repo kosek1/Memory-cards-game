@@ -6,4 +6,4 @@ Memory game for children with animals photos.
 Photos are from pixabay.
 App has got PWA.
 
-#html5, css3, scss, js, gulp
+#html5, css3, scss, bootstrap, js, gulp
