@@ -44,7 +44,7 @@ body {
 .level-list {
   position: absolute;
   top: 8vh;
-  left: 82vw;
+  left: 82.5vw;
   width: 10vw;
   display: none;
   flex-wrap: wrap;
@@ -55,6 +55,7 @@ body {
         a{
           text-decoration: none;
           color: black;
+          max-width:  100%;
               .level-button {
                   width: 40px;
                   height: 40px;
@@ -79,6 +80,7 @@ body {
             width: 100%;
             margin-top: 2vh;
             color: black;
+            font-family: 'Merriweather', serif;
                   .dot {
                     width: 15px;
                     height: 15px;
@@ -238,6 +240,16 @@ body {
    @include turtle-word;
 }
 
+.my-container-summary{
+      position: fixed;
+      top: 20vh;
+}
+
+.summary-level-one , .summary-level-two, .summary-level-three,
+.summary-level-four, .summary-level-five, .summary-level-six {
+    display: none;
+}
+
 
 // #level1
 .container-level-one {
@@ -270,59 +282,6 @@ body {
               }
 }
 
-.summary-level-one {
-  display: none;
-  justify-content: center;
-  margin: 20vh auto;
-  width: 340px;
-  height: 400px;
- animation: opacity 1.5s linear;
-     .photos-section {
-         width: 300px;
-         height: 240px;
-         position: absolute;
-         bottom: 25vh;
-         display: flex;
-         flex-direction: column;
-         margin:  0 auto 40px;
-             span {
-               width: 300px;
-               height: 240px;
-               font-size: 40px;
-               display: flex;
-               justify-content: center;
-               align-items: center;
-                   img {
-                      width: 100px;
-                      height: 100px;
-                   }
-           }
-       }
-       .buttons {
-         width: 300px;
-         height: 100px;
-         display: flex;
-         flex-direction: row;
-         justify-content: center;
-         align-items: center;
-         position: absolute;
-         bottom: 10vh;
-             button {
-                   border-radius: 50%;
-                   border: 0;
-                   width: 100px;
-                   height: 100px;
-                   margin: 0 5px;
-                   cursor: pointer;
-                   background-color: transparent;
-             }
-             button:nth-child(3) {
-                transform: rotateY(180deg);
-             }
-        }
-}
-
-
 // #level2
 .container-level-two {
     width: 50%;
@@ -353,60 +312,6 @@ body {
                 }
          }
 }
-
-.summary-level-two {
-  display: none;
-  justify-content: center;
-  margin: 20vh auto;
-  width: 340px;
-  height: 400px;
- animation: opacity 1.5s linear;
-       .photos-section {
-             width: 300px;
-             height: 240px;
-             position: absolute;
-             bottom: 30vh;
-             display: flex;
-             flex-direction: column;
-             margin:  0 auto 40px;
-                   span {
-                     width: 300px;
-                     height: 240px;
-                     font-size: 40px;
-                     display: flex;
-                     justify-content: center;
-                     align-items: center;
-                         img {
-                            width: 100px;
-                            height: 100px;
-                         }
-                   }
-          }
-
-          .buttons {
-            width: 300px;
-            height: 100px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            bottom: 10vh;
-                button {
-                      border-radius: 50%;
-                      border: 0;
-                      width: 100px;
-                      height: 100px;
-                      margin: 0 5px;
-                      cursor: pointer;
-                      background-color: transparent;
-                }
-                button:nth-child(3) {
-                   transform: rotateY(180deg);
-                }
-         }
-}
-
 
 // #level3
 .container-level-three {
@@ -442,53 +347,6 @@ body {
       }
 }
 
-.summary-level-three {
-    display: none;
-    justify-content: center;
-    margin: 20vh auto;
-    width: 340px;
-    height: 400px;
-   animation: opacity 1.5s linear;
-       .photos-section {
-           width: 100%;
-           height: 100%;
-           display: flex;
-           font-size: 20px;
-               .left-side, .right-side {
-                  display: flex;
-                  flex-direction: column;
-                  width: 170px;
-                  height: 400px;
-               }
-                 span {
-                   display: flex;
-                   justify-content: center;
-                   align-items: center;
-                       img {
-                         width: 100px;
-                         height: 100px;
-                       }
-                }
-          }
-          .buttons {
-            width: 300px;
-            height: 100px;
-            position: absolute;
-            bottom: 10vh;
-                button {
-                  width: 30%;
-                  height: 100%;
-                  background-color: transparent;
-                  border: 0;
-                  cursor: pointer;
-                }
-                button:nth-child(3) {
-                   transform: rotateY(180deg);
-                }
-          }
-}
-
-
 // #level4
 .container-level-four {
     width: 100%;
@@ -520,54 +378,6 @@ body {
        }
 }
 
-.summary-level-four {
-  display: none;
-  justify-content: center;
-  margin: 10vh auto;
-  width: 340px;
-  height: 400px;
-  animation: opacity 1.5s linear;
-      .photos-section {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          font-size: 20px;
-              .left-side, .right-side {
-                 display: flex;
-                 flex-direction: column;
-                 width: 170px;
-                 height: 400px;
-              }
-              span {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                    img {
-                      width: 100px;
-                      height: 100px;
-                    }
-              }
-      }
-
-      .buttons {
-        width: 300px;
-        height: 100px;
-        position: absolute;
-        bottom: 10vh;
-             button {
-               width: 30%;
-               height: 100%;
-               background-color: transparent;
-               border: 0;
-               cursor: pointer;
-             }
-             button:nth-child(3) {
-                transform: rotateY(180deg);
-             }
-       }
-}
-
-
 // #level5
 .container-level-five {
     width: 100%;
@@ -598,53 +408,6 @@ body {
                 }
           }
 }
-
-.summary-level-five {
-    display: none;
-    justify-content: center;
-    margin: 10vh auto;
-    width: 340px;
-    height: 400px;
-    animation: opacity 1.5s linear;
-       .photos-section {
-         width: 100%;
-         height: 100%;
-         display: flex;
-         font-size: 20px;
-             .left-side, .right-side{
-                display: flex;
-                flex-direction: column;
-                width: 170px;
-                height: 400px;
-             }
-             span {
-               display: flex;
-               justify-content: center;
-               align-items: center;
-                   img {
-                     width: 80px;
-                     height: 80px;
-                   }
-               }
-          }
-          .buttons {
-            width: 300px;
-            height: 100px;
-            position: absolute;
-            bottom: 10vh;
-                button {
-                  width: 30%;
-                  height: 100%;
-                  background-color: transparent;
-                  border: 0;
-                  cursor: pointer;
-                }
-                button:nth-child(3) {
-                   transform: rotateY(180deg);
-                }
-           }
-}
-
 
 // #level6
 .container-level-six {
@@ -681,58 +444,18 @@ body {
         }
 }
 
-.summary-level-six {
-    display: none;
-    justify-content: center;
-    margin: 10vh auto;
-    width: 360px;
-    height: 400px;
-    animation: opacity 1.5s linear;
-       .photos-section {
-         width: 100%;
-         height: 100%;
-         display: flex;
-         font-size: 20px;
-               .left-side, .middle, .right-side {
-                  display: flex;
-                  flex-direction: column;
-                  width: 32%;
-                  height: 400px;
-               }
-               span {
-                 display: flex;
-                 justify-content: center;
-                 align-items: center;
-                 font-size: 18px;
-                       img {
-                         width: 60px;
-                         height: 60px;
-                       }
-                  }
-          }
-          .buttons {
-            width: 300px;
-            height: 100px;
-            position: absolute;
-            bottom: 10vh;
-                button {
-                  width: 30%;
-                  height: 100%;
-                  background-color: transparent;
-                  border: 0;
-                  cursor: pointer;
-                }
-                button:nth-child(3) {
-                   transform: rotateY(180deg);
-                }
-            }
+
+.previous, .again, .next {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
 }
 
-.game-time {
-  position: absolute;
-  top: 27.5%;
-  left: 85%;
-  text-align: center;
+.next{
+  transform: rotateY(180deg);
 }
 
 // #additional class for JS
@@ -761,7 +484,6 @@ body {
                 .level-button {
                      width: 30px;
                      height: 30px;
-                     margin: 15px;
                 }
            }
            .legend {
@@ -779,10 +501,6 @@ body {
               }
         }
 
-        .summary-level-one {
-            top: 10%;
-        }
-
         // #level2 - portrait
         .container-level-two {
           width: 95%;
@@ -790,21 +508,6 @@ body {
                 .flash-card {
                   width: 100%;
                }
-          }
-
-          .summary-level-two {
-                .buttons {
-                    bottom: 4vh;
-                 }
-                .photos-section {
-                    height: 140px;
-                      span {
-                          img {
-                             width: 90px;
-                             height: 55px;
-                          }
-                      }
-                 }
           }
 
            // #level3 - portrait
@@ -818,24 +521,6 @@ body {
                  }
            }
 
-           .summary-level-three {
-              margin: 8vh auto;
-                .buttons {
-                    width: 225px;
-                    height: 225px;
-                    bottom: 0;
-                }
-
-                .photos-section {
-                     span {
-                           img {
-                               width: 70px;
-                               height: 70px;
-                           }
-                       }
-                }
-           }
-
            // #level4 - portrait
            .container-level-four {
                  .flash-card {
@@ -844,30 +529,12 @@ body {
                   }
              }
 
-             .summary-level-four {
-                margin: 7vh auto;
-                    .buttons {
-                        width: 225px;
-                        height: 225px;
-                        bottom: 4vh;
-                    }
-              }
-
               // #level5 - portrait
               .container-level-five {
                   .flash-card {
                      width: 95%;
                      height: 70%;
                    }
-             }
-
-             .summary-level-five {
-                margin: 6vh auto;
-                    .buttons {
-                        width: 225px;
-                        height: 225px;
-                        bottom: -1vh;
-                    }
              }
 
              // #level6 - portrait
@@ -878,91 +545,13 @@ body {
                           height: 85%;
                     }
              }
-
-             .summary-level-six {
-                margin: 8vh auto;
-                    .buttons {
-                        width: 225px;
-                        height: 225px;
-                        bottom: -8vh;
-                    }
-              }
-
-              // #game-time - portrait
-              .game-time {
-                  top: 11vh;
-                  left: 0.5%;
-              }
 }
 @media (width: 320px) {
-      .summary-level-three {
-         width: 290px;
-             .photos-section {
-                 width: 100%;
-             }
-             .left-side, .right-side{
-                width: 140px;
-             }
-             .buttons {
-                bottom: -8vh;
-             }
-      }
-      .summary-level-four {
-         width: 290px;
-            .photos-section{
-                width: 100%;
-            }
-            .left-side, .right-side{
-                width: 140px;
-            }
-             .buttons {
-                 bottom: -8vh;
-             }
-      }
-      .summary-level-five {
-         width: 290px;
-            .photos-section{
-                width: 100%;
-            }
-            .left-side, .right-side{
-                width: 140px;
-            }
-            .buttons {
-                 bottom: -8vh;
-            }
-      }
-      .summary-level-six {
-         width: 290px;
-            .photos-section {
-                 width: 100%;
-            }
-            .left-side, .middle, .right-side{
-                width: 90px;
-            }
-            .buttons{
-                bottom: -8vh;
-            }
-      }
-}
-
-@media (width: 568px) {
-    .summary-level-three .buttons, .summary-level-four .buttons, .summary-level-five .buttons, .summary-level-six .buttons{
-        bottom: 0;
-    }
-}
-@media (width: 960px) and (height:600px) {
-    .summary-level-three {
-        margin: 5vh auto;
-    }
-    .summary-level-four {
-        margin: -5vh auto;
-    }
-    .summary-level-five {
-        margin: -2vh auto;
-    }
-    .summary-level-six {
-        margin: 0 auto;
-    }
+     .topbar {
+         .my-topbar-header{
+             font-size: 1.75rem;
+         }
+     }
 }
 @media (orientation: portrait) and (min-height: 700px) and (max-height: 750px) {
     .container-level-two {
@@ -970,76 +559,6 @@ body {
        height: 50vh;
        margin: 10vh auto;
     }
-}
-@media (orientation: landscape) and (max-width: 740px) {
-     .summary-level-three {
-         height: 300px;
-         margin: 8vh auto 0;
-             .photos-section {
-                   .left-side, .right-side {
-                     width: 150px;
-                         img {
-                            width: 60px;
-                            height: 60px;
-                         }
-                   }
-             }
-             .buttons {
-                width: 150px;
-                height: 50px;
-             }
-       }
-       .summary-level-four {
-           height: 300px;
-           margin: 0 auto;
-             .photos-section {
-                   .left-side, .right-side {
-                     width: 150px;
-                         img {
-                            width: 60px;
-                            height: 60px;
-                         }
-                   }
-             }
-             .buttons {
-                width: 150px;
-                height: 50px;
-             }
-       }
-       .summary-level-five {
-           height: 300px;
-           margin: 0 auto;
-               .photos-section {
-                   .left-side, .right-side {
-                     width: 150px;
-                         img {
-                            width: 48px;
-                            height: 48px;
-                         }
-                    }
-               }
-               .buttons {
-                  width: 150px;
-                  height: 50px;
-               }
-         }
-         .summary-level-six {
-              height: 300px;
-              margin: 0 auto;
-                  .photos-section{
-                      .left-side, .middle, .right-side {
-                        width: 150px;
-                            img{
-                               width: 40px;
-                               height: 40px;
-                            }
-                      }
-                  }
-                 .buttons {
-                    width: 150px;
-                    height: 50px;
-                 }
-           }
 }
 @media (orientation: landscape) and  (max-width: 740px) and (max-height: 639px) {
     .container-level-two {
@@ -1058,37 +577,6 @@ body {
           }
        }
 }
-@media (orientation: landscape) and (max-width: 1024px) and (max-height: 480px) {
-     .level {
-         .active-level {
-            margin: 5px 0 0 10px;
-         }
-          .button-level {
-                  top: 2.5vh;
-                  left: calc(95% - 15%);
-                  width: 15%;
-                 height: 8vh;
-          }
-     }
-
-      .summary-level-one {
-          top: 50%;
-          height: 160px;
-              .photos-section {
-                 margin: 0 10px 10vh;
-                 width: 300px;
-                 height: 180px;
-              }
-               .buttons {
-                  bottom: -10vh;
-                  width: 225px;
-                  height: 225px;
-               }
-               span {
-                    height: 0;
-               }
-      }
-}
 
 @media (min-width: 768px) and (max-width: 1250px) {
     .level-list {
@@ -1101,10 +589,43 @@ body {
     }
 }
 
-@media (min-width: 1500px) {
-     .game-time {
-        left: 86%;
-     }
+.game-time{
+   border: 3px solid;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+.font-size-summary{
+   font-size: 2rem;
+}
+
+.my-img-summary {
+   width: 30%;
+   height: auto;
+}
+
+.my-img-summary-responsive {
+   width: 25%;
+   height: auto;
+}
+
+.my-container-summary-responsive{
+   position: fixed;
+   top: 15vh;
+}
+
+.img-summary-six{
+  max-width: 12% !important;
+}
+
+@media(max-width: 450px) {
+     .my-img-summary-responsive {
+        width: 100%;
+      }
+
+      .img-sum-six{
+           max-width: 25% !important;
+      }
 }
 
 @keyframes rotate-card {
